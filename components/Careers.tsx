@@ -4,10 +4,11 @@ import { motion } from "framer-motion";
 import AnimatedPosition from "./AnimatedPosition";
 
 const openPositions = [
-  "Interior Designers",
-  "Project Managers",
-  "Workspace Consultants",
+  "Architect",
+  "Project Manager",
+  "Site Supervisor",
   "Business Development Executives",
+  "Lead Development Specialist"
 ];
 
 export default function Careers() {
@@ -22,7 +23,14 @@ export default function Careers() {
           <h3 className="text-2xl font-semibold mb-6">Open Positions:</h3>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {openPositions.map((position, index) => (
-              <AnimatedPosition key={index} position={position} index={index} />
+              <AnimatedPosition
+                key={index}
+                position={position}
+                index={index}
+                onClick={() =>
+                  (window.location.href = `mailto:careers@outtabox.work?subject=Application for ${position} Position`)
+                }
+              />
             ))}
           </ul>
           <motion.div className="mt-8 text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
