@@ -7,7 +7,7 @@ const services = [
   {
     title: "Workspace Strategy & Consulting",
     description: "Tailored solutions for your unique workspace needs.",
-    image: "/pictures/office-design.jpg",
+    image: "/pictures/remote.jpeg",
     whatsappMessage: "I would like to inquire about your Workspace Strategy & Consulting services.",
   },
   {
