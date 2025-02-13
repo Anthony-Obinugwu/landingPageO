@@ -41,7 +41,7 @@ const socialLinks = [
   { icon: Instagram, href: "https://www.instagram.com/outtaboxwork?igsh=MWp4ZDVpNW9tcXlmeQ%3D%3D&utm_source=qr" },
   {
     icon: Facebook,
-    href: "https://www.facebook.com/share/1BTiDeu6GX/?mibextid=wwXIfr",
+    href: "https://www.facebook.com/profile.php?id=61573198970676",
   },
   // { icon: X, href: "#" },
   { icon: LinkedIn, href: "#" },
