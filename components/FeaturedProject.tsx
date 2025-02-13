@@ -86,7 +86,7 @@ export default function FeaturedProject() {
             <h3 className="text-2xl font-bold mb-4">DiNovate</h3>
             <p className="text-lg mb-6">Lagos, Nigeria | Innovative Tech Hub</p>
             <p className="mb-6">
-              We collaborated with DiNovate to create a cutting-edge tech hub that fosters innovation and collaboration.
+              A media space in Abuja which wee collaborated with DiNovate to create a cutting-edge tech hub that fosters innovation and collaboration.
               This project showcases:
             </p>
             <ul className="space-y-4">

@@ -16,7 +16,7 @@ const services = [
   {
     title: "Corporate Office Interior Design & Fit-Out",
     description: "Custom office layouts, furniture & branding. Corporate headquarters, startups & innovation hubs.",
-    image: "/pictures/office-design.jpg",
+    image: "/pictures/smart.jpeg",
     cta: "Design Your Office",
     whatsappMessage: "I'd like to know more about Corporate Office Interior Design & Fit-Out services.",
   },

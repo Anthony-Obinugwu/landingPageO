@@ -1,6 +1,6 @@
 "use client";
 
-import { Facebook, X, LinkedinIcon as LinkedIn, Instagram, Phone, Mail, MapPin, ChevronRight, MessageCircle } from "lucide-react";
+import { Facebook, LinkedinIcon as LinkedIn, Instagram, Phone, Mail, MapPin, ChevronRight, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import AnimatedFooterLogo from "./AnimatedFooterLogo";
 
@@ -41,12 +41,13 @@ const socialLinks = [
   { icon: Instagram, href: "https://www.instagram.com/outtaboxwork?igsh=MWp4ZDVpNW9tcXlmeQ%3D%3D&utm_source=qr" },
   {
     icon: Facebook,
-    href: "https://linktr.ee/outtaboxworkspaces?utm_source=linktree_profile_share&ltsid=b46c3ada-59c4-475b-9814-6974644d1280",
+    href: "https://www.facebook.com/share/1BTiDeu6GX/?mibextid=wwXIfr",
   },
-  { icon: X, href: "#" },
+  // { icon: X, href: "#" },
   { icon: LinkedIn, href: "#" },
-  { icon: MessageCircle, href: "https://www.threads.net/@outtaboxwork?igshid=NTc4MTIwNjQ2YQ==" },
+  { icon: MessageCircle, href: "https://www.threads.net/@outtaboxwork?igshid=NTc4MTIwNjQ2YQ=="},
   { icon: Phone, href: "http://wa.me/2347044227870" },
+  // { icon: Pinterest, href: "https://pin.it/3XtUdwslp" },
 ];
 
 export default function Footer() {

@@ -7,7 +7,7 @@ const services = [
   {
     title: "Workspace Strategy & Consulting",
     description: "Tailored solutions for your unique workspace needs.",
-    image: "/pictures/GVE-pic.jpeg",
+    image: "/pictures/office-design.jpg",
     whatsappMessage: "I would like to inquire about your Workspace Strategy & Consulting services.",
   },
   {
@@ -46,7 +46,7 @@ export default function Services() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const handleWhatsAppClick = (message: string) => {
-    const phoneNumber = "+2348038980470"; // Replace with your actual WhatsApp number
+    const phoneNumber = "+2347044227870"; // Replace with your actual WhatsApp number
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
   };
