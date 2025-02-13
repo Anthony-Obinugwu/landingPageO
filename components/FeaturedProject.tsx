@@ -4,24 +4,7 @@ import { Sun, Users, Leaf, Zap, Cpu, Lightbulb } from "lucide-react";
 import ImageSlideshow from "./ImageSlideshow";
 import AnimatedFeature from "./AnimatedFeature";
 
-const gveImages = [
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Untitled%20design%20(83)-z4mQxL0HNMccEr06ysq2B2X17vJVMX.png",
-    alt: "GVE Meeting Room",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Untitled%20design%20(84)-PpKqAKw1CiWR6UI529dtaiJf33rEg2.png",
-    alt: "GVE Office Space",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Untitled%20design%20(85)-AcMI6v8M0zKSDNTozcNIMzTrebBV5q.png",
-    alt: "GVE Modern Office",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Untitled%20design%20(82)-qryWtXr9tPigBxGOHzaTMtyZHKiobe.png",
-    alt: "GVE Executive Office",
-  },
-];
+const gveVideo = "/videos/gve-project.mp4"; // Path to the video file in the public directory
 
 const areaiImages = [
   {
@@ -70,7 +53,10 @@ export default function FeaturedProject() {
         {/* GVE Project */}
         <div className="flex flex-col lg:flex-row items-start gap-12 mb-24">
           <div className="lg:w-1/2 w-full">
-            <ImageSlideshow images={gveImages} interval={5000} className="w-full" />
+            <video controls className="w-full rounded-lg">
+              <source src={gveVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div className="lg:w-1/2">
             <h3 className="text-2xl font-bold mb-4">Green Village Electricity (GVE)</h3>
@@ -93,14 +79,14 @@ export default function FeaturedProject() {
 
         {/* DNovate Project */}
         <div className="flex flex-col lg:flex-row items-start gap-12 mb-24">
-          <div className="lg:w-1/2 order-2 lg:order-1 w-full">
+          <div className="lg:w-1/2 w-full">
             <ImageSlideshow images={dnovateImages} interval={5000} className="w-full" />
           </div>
-          <div className="lg:w-1/2 order-1 lg:order-2">
-            <h3 className="text-2xl font-bold mb-4">DNovate</h3>
+          <div className="lg:w-1/2">
+            <h3 className="text-2xl font-bold mb-4">DiNovate</h3>
             <p className="text-lg mb-6">Lagos, Nigeria | Innovative Tech Hub</p>
             <p className="mb-6">
-              We collaborated with DNovate to create a cutting-edge tech hub that fosters innovation and collaboration.
+              We collaborated with DiNovate to create a cutting-edge tech hub that fosters innovation and collaboration.
               This project showcases:
             </p>
             <ul className="space-y-4">

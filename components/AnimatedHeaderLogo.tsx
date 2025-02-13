@@ -8,13 +8,13 @@ const AnimatedHeaderLogo: React.FC = () => {
     <motion.div
       animate={{ rotate: 360 }}
       transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-      className="w-6 h-6 mr-2"
+      className="w-8 h-8 mr-2"
     >
       <Image
         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Outtabox%20Logo-mc6A00B0tjgc93UfWxOs4TOFKrwLEC.png"
         alt="Outtabox Logo"
-        width={24}
-        height={24}
+        width={32}
+        height={32}
         className="w-full h-full"
       />
     </motion.div>

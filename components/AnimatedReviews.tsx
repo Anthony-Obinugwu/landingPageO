@@ -6,22 +6,22 @@ import { motion, useAnimation, useInView } from "framer-motion";
 const reviews = [
   {
     text: "Outtabox transformed our office into a creative powerhouse. The team's attention to detail and innovative design solutions have significantly boosted our productivity.",
-    author: "Jane Doe",
+    author: "Chinedu Obi",
     company: "Tech Innovators Inc.",
   },
   {
     text: "Working with Outtabox was a game-changer for our startup. They created a flexible, inspiring workspace that grows with us.",
-    author: "John Smith",
+    author: "Ebuka Uzoekwere",
     company: "Future Ventures",
   },
   {
     text: "The smart office solutions implemented by Outtabox have not only improved our energy efficiency but also enhanced our team's well-being.",
-    author: "Emily Johnson",
+    author: "Ifeanyi Emmanuel",
     company: "Green Solutions Co.",
   },
   {
     text: "Outtabox's design perfectly captured our company culture. Our new office space has become a key factor in attracting top talent.",
-    author: "Michael Brown",
+    author: "Claire Omua",
     company: "Innovative Designs Ltd.",
   },
 ];
@@ -38,7 +38,7 @@ const AnimatedReviews: React.FC = () => {
   }, [isInView, controls]);
 
   return (
-    <section ref={containerRef} className="py-20 bg-light-gray overflow-hidden">
+    <section ref={containerRef} className="py-20 bg-light-gray overflow-hidden" id="reviews">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
         <motion.div

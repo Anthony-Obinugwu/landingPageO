@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import AnimatedPosition from "./AnimatedPosition";
 
 const openPositions = [
@@ -13,7 +13,7 @@ const openPositions = [
 
 export default function Careers() {
   return (
-    <section className="py-16 bg-light-gray">
+    <section className="py-16 bg-light-gray" id="careers">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">Join Our Team</h2>
         <p className="text-center text-lg mb-12 max-w-2xl mx-auto">
@@ -33,14 +33,14 @@ export default function Careers() {
               />
             ))}
           </ul>
-          <motion.div className="mt-8 text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          {/* <motion.div className="mt-8 text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
             <a
-              href="#"
+              href="careers"
               className="inline-block bg-tech-green text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition duration-300"
             >
               View All Openings
             </a>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </section>

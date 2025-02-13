@@ -1,26 +1,62 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { LucideIcon } from "lucide-react";
+import Image from "next/image";
 
 interface AnimatedServiceProps {
-  icon: LucideIcon;
   title: string;
   description: string;
+  image: string;
+  whatsappMessage: string;
   index: number;
+  onClick: () => void;
+  hoveredIndex: number | null;
+  setHoveredIndex: (index: number | null) => void;
 }
 
-const AnimatedService: React.FC<AnimatedServiceProps> = ({ icon: Icon, title, description, index }) => {
+const AnimatedService: React.FC<AnimatedServiceProps> = ({
+  title,
+  description,
+  image,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  whatsappMessage,
+  index,
+  onClick,
+  hoveredIndex,
+  setHoveredIndex,
+}) => {
   return (
     <motion.div
-      className="bg-white p-6 rounded-lg shadow-md"
+      className="relative h-80 rounded-lg overflow-hidden group cursor-pointer"
+      onMouseEnter={() => setHoveredIndex(index)}
+      onMouseLeave={() => setHoveredIndex(null)}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
     >
-      <Icon className="w-12 h-12 text-tech-green mb-4" />
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <Image
+        src={image || "/placeholder.svg"}
+        alt={title}
+        layout="fill"
+        objectFit="cover"
+        className="transition-transform duration-300 group-hover:scale-110"
+      />
+      <div className="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 group-hover:bg-opacity-70 flex flex-col justify-center items-center text-center p-6">
+        <h3 className="text-xl font-bold text-white mb-2 transition-all duration-300 group-hover:-translate-y-4">
+          {title}
+        </h3>
+        <p className="text-white font-semibold mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
+          {description}
+        </p>
+        <button
+          className={`bg-tech-green text-white px-6 py-2 rounded-full transition-all duration-300 ${
+            hoveredIndex === index ? "opacity-100 transform translate-y-0" : "opacity-0 transform translate-y-4"
+          }`}
+          onClick={onClick}
+        >
+          Let's get in Touch
+        </button>
+      </div>
     </motion.div>
   );
 };

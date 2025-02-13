@@ -43,7 +43,7 @@ const AnimatedTestimonials: React.FC = () => {
   return (
     <section className="py-16 bg-light-gray">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-12" >What Our Clients Say</h2>
         <div className="relative">
           <div className="flex items-center justify-center">
             <button

@@ -1,6 +1,6 @@
 "use client";
 
-import { Facebook, Twitter, LinkedinIcon as LinkedIn, Instagram, Phone, Mail, MapPin, ChevronRight } from "lucide-react";
+import { Facebook, X, LinkedinIcon as LinkedIn, Instagram, Phone, Mail, MapPin, ChevronRight, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import AnimatedFooterLogo from "./AnimatedFooterLogo";
 
@@ -32,16 +32,21 @@ const footerLinks = {
 };
 
 const contactInfo = [
-  { icon: Phone, text: "+2348038980470", href: "tel:+2348038980470" },
+  { icon: Phone, text: "+2347044227870", href: "tel:+2347044227870" },
   { icon: Mail, text: "hello@outtabox.work", href: "mailto:hello@outtabox.work" },
   { icon: MapPin, text: "Abuja, Nigeria", href: "#" },
 ];
 
 const socialLinks = [
-  { icon: Facebook, href: "#" },
-  { icon: Twitter, href: "#" },
+  { icon: Instagram, href: "https://www.instagram.com/outtaboxwork?igsh=MWp4ZDVpNW9tcXlmeQ%3D%3D&utm_source=qr" },
+  {
+    icon: Facebook,
+    href: "https://linktr.ee/outtaboxworkspaces?utm_source=linktree_profile_share&ltsid=b46c3ada-59c4-475b-9814-6974644d1280",
+  },
+  { icon: X, href: "#" },
   { icon: LinkedIn, href: "#" },
-  { icon: Instagram, href: "#" },
+  { icon: MessageCircle, href: "https://www.threads.net/@outtaboxwork?igshid=NTc4MTIwNjQ2YQ==" },
+  { icon: Phone, href: "http://wa.me/2347044227870" },
 ];
 
 export default function Footer() {
@@ -65,6 +70,8 @@ export default function Footer() {
                 <a
                   key={index}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-tech-green hover:text-tech-green/80 transition-colors"
                 >
                   <social.icon className="w-5 h-5" />

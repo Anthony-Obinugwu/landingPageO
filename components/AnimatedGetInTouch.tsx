@@ -31,7 +31,7 @@ const AnimatedGetInTouch: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <a
-              href="#contact"
+              href="#contact-us"
               className="inline-flex items-center bg-tech-green text-white font-bold py-3 px-6 rounded-full hover:bg-opacity-90 transition duration-300"
             >
               Contact us
