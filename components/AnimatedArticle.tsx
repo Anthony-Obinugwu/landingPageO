@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface Article {
   title: string;
@@ -45,7 +47,13 @@ const AnimatedArticle = ({ article, index }: AnimatedArticleProps) => {
       <div className="p-6">
         <h3 className={`text-xl font-semibold mb-3 ${isExpanded ? "text-2xl" : ""}`}>{article.title}</h3>
         <p className={`text-gray-600 mb-4 ${isExpanded ? "text-lg" : ""}`}>
-          {isExpanded ? article.content : article.excerpt}
+          {isExpanded ? (
+            <ReactMarkdown className="prose" remarkPlugins={[remarkGfm]}>
+              {article.content}
+            </ReactMarkdown>
+          ) : (
+            article.excerpt
+          )}
         </p>
         {isExpanded && (
           <div className="flex flex-col sm:flex-row justify-between items-center mt-4 space-y-4 sm:space-y-0">

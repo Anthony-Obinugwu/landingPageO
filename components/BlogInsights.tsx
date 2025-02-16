@@ -3,29 +3,30 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import AnimatedArticle from "./AnimatedArticle";
 
 const articles = [
   {
-    title: "The Future of Work: Why Hybrid Offices Are Here to Stay",
-    excerpt: "Explore the benefits and challenges of hybrid work models and how they're shaping modern workspaces.",
+    title: "How Modern Office Spaces Boost Productivity: A Design-First Approach",
+    excerpt: "A well-designed office isn’t just about aesthetics; it directly impacts productivity and employee well-being. Discover how modern office layouts enhance focus and collaboration.",
     content:
-      "The concept of hybrid work has gained significant traction in recent years, especially in the wake of global events that have reshaped our understanding of the workplace. This model, which combines remote work with in-office presence, offers a flexible approach that caters to the diverse needs of both employees and employers. As we look towards the future, it's becoming increasingly clear that hybrid offices are not just a temporary solution, but a lasting shift in how we approach work.",
+      "A thoughtfully designed office can make all the difference in employee efficiency and job satisfaction. Today’s workplaces prioritize functionality, comfort, and innovation to foster creativity and seamless collaboration.\n\n### Key Elements of a Productive Office Space\n- **Ergonomics & Comfort:** Adjustable desks, supportive chairs, and optimal lighting reduce strain and enhance productivity.\n- **Biophilic Design:** Incorporating greenery, natural light, and outdoor-inspired elements improves focus and reduces stress.\n- **Flexible Layouts:** Open spaces, breakout zones, and quiet rooms cater to different work styles.\n- **Technology Integration:** Smart offices with automated lighting, noise control, and digital collaboration tools streamline workflows.\n\nBy designing with productivity in mind, businesses can create an environment where employees thrive.",
     image: "/pictures/custom.jpeg",
   },
   {
-    title: "How Smart Offices Improve Productivity & Employee Well-being",
-    excerpt: "Discover the latest technologies and design principles that are revolutionizing office environments.",
+    title: "The Future of Office Spaces: Trends Shaping Work Environments in 2025",
+    excerpt: "The office landscape is evolving rapidly. From hybrid workspaces to sustainable designs, here’s what’s shaping the future of work in 2025.",
     content:
-      "Smart offices are at the forefront of workplace innovation, leveraging cutting-edge technologies to create environments that boost productivity and enhance employee well-being. From IoT-enabled devices that optimize energy usage to AI-powered systems that personalize workspace conditions, smart offices are transforming how we interact with our work environments. This article explores the various technologies and design strategies employed in smart offices and examines their impact on productivity, employee satisfaction, and overall organizational success.",
+      "As businesses adapt to changing work cultures, office spaces must evolve to meet new demands. Here are some key trends defining the future of workplaces.\n\n### Top Office Space Trends for 2025\n- **Hybrid Workspaces:** Offices are shifting towards flexible designs that support both remote and in-person collaboration.\n- **Smart Office Technology:** IoT-powered spaces with AI-driven climate control, lighting, and occupancy sensors are on the rise.\n- **Sustainable Design:** Energy-efficient materials, solar panels, and waste reduction initiatives are becoming standard.\n- **Wellness-Centric Spaces:** More companies are integrating relaxation areas, fitness zones, and mental wellness programs into office design.\n\nStaying ahead of these trends ensures a workplace that enhances efficiency and attracts top talent.",
     image: "/pictures/smart.jpeg",
   },
   {
-    title: "Top 5 Trends in Workspace Design for 2025",
-    excerpt:
-      "Get ahead of the curve with our predictions for the most impactful office design trends in the coming years.",
+    title: "Finding the Perfect Office Space: What Businesses Should Consider",
+    excerpt: "Choosing the right office space is crucial for business growth. Here’s what to keep in mind when selecting a workspace.",
     content:
-      "As we approach 2025, the landscape of workspace design continues to evolve at a rapid pace. Influenced by technological advancements, changing work cultures, and a growing emphasis on employee well-being, the offices of the near future are set to look and function quite differently from those of today. This article presents our top 5 predictions for workspace design trends that we believe will dominate by 2025, including biophilic design elements, adaptive spaces, and technology-integrated environments.",
+      "Selecting an office space isn’t just about location; it’s about ensuring a perfect fit for your team’s needs and future growth. Here are essential factors to consider:\n\n### Key Considerations for Office Selection\n- **Location & Accessibility:** Proximity to clients, public transport, and key business hubs matters.\n- **Scalability:** Ensure the space can accommodate future growth without frequent relocations.\n- **Amenities & Infrastructure:** High-speed internet, meeting rooms, and common areas enhance the work experience.\n- **Budget & Lease Terms:** Factor in costs beyond rent, including utilities, maintenance, and flexible lease options.\n\nA well-chosen office space sets the foundation for success and employee satisfaction.",
     image: "/pictures/remote.jpeg",
   },
 ];
@@ -44,4 +45,3 @@ export default function BlogInsights() {
     </section>
   );
 }
-
