@@ -2,27 +2,30 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
-interface AnimatedArticleProps {
-  id: number;
-  title: string;
-  excerpt: string;
-  index: number;
-}
+const AnimatedArticle = ({ article, index }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
 
-const AnimatedArticle: React.FC<AnimatedArticleProps> = ({ id, title, excerpt, index }) => {
   return (
     <motion.div
-      className="bg-white p-6 rounded-lg shadow-md"
+      className={`bg-white rounded-lg shadow-md overflow-hidden ${
+        isExpanded ? "fixed inset-0 z-50 overflow-y-auto" : ""
+      }`}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
     >
-      <h3 className="text-xl font-semibold mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4">{excerpt}</p>
-      <Link href={`/blog/${id}`} legacyBehavior>
-        <a className="text-tech-green font-semibold hover:underline">Read More</a>
-      </Link>
+      <div className="relative h-48">
+        <Image src={article.image} alt={article.title} layout="fill" objectFit="cover" />
+      </div>
+      <div className="p-6">
+        <h3 className="text-xl font-semibold mb-3">{article.title}</h3>
+        <p className="text-gray-600 mb-4">{isExpanded ? article.content : article.excerpt}</p>
+        <button onClick={() => setIsExpanded(!isExpanded)} className="text-tech-green font-semibold hover:underline">
+          {isExpanded ? "Close" : "Read More"}
+        </button>
+      </div>
     </motion.div>
   );
 };
