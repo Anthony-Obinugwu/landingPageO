@@ -8,7 +8,8 @@ import {
   Mail,
   MapPin,
   ChevronRight,
-  MessageCircle,
+  AtSign, 
+  MessageSquare,
   PinIcon as Pinterest,
 } from "lucide-react";
 import Link from "next/link";
@@ -45,8 +46,9 @@ const socialLinks = [
     icon: Facebook,
     href: "https://web.facebook.com/people/Outtabox-Future-Forward-Workspaces/61573198970676/",
   },
-  { icon: MessageCircle, href: "https://www.threads.net/@outtaboxwork?igshid=NTc4MTIwNjQ2YQ==" },
-  { icon: Phone, href: "http://wa.me/2347044227870" },
+  { icon: AtSign, href: "https://www.threads.net/@outtaboxwork?igshid=NTc4MTIwNjQ2YQ==" },
+  { icon: MessageSquare, href: "http://wa.me/2347044227870" },
+  { icon: Phone, href: "tel:+2347044227870"}
   { icon: Pinterest, href: "https://pin.it/3XtUdwslp" },
 ];
 
