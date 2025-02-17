@@ -1,10 +1,11 @@
 "use client";
 
+import { useState, useRef } from "react";
 import { Sun, Users, Leaf, Zap, Cpu, Lightbulb } from "lucide-react";
 import ImageSlideshow from "./ImageSlideshow";
 import AnimatedFeature from "./AnimatedFeature";
 
-const gveVideo = "/videos/gve-project.mp4"; // Path to the video file in the public directory
+const gveVideo = "https://www.youtube.com/embed/-vL4HXeWeyg";
 
 const areaiImages = [
   {
@@ -45,6 +46,16 @@ const dnovateImages = [
 ];
 
 export default function FeaturedProject() {
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  const handlePlayButtonClick = () => {
+    if (iframeRef.current) {
+      iframeRef.current.src += "?autoplay=1&mute=1";
+      setIsVideoPlaying(true);
+    }
+  };
+
   return (
     <section className="py-16 bg-light-gray" id="featured-projects">
       <div className="container mx-auto px-4">
@@ -53,20 +64,34 @@ export default function FeaturedProject() {
         {/* GVE Project */}
         <div className="flex flex-col lg:flex-row items-start gap-12 mb-24">
           <div className="lg:w-1/2 w-full">
-            <video controls className="w-full rounded-lg">
-              <source src={gveVideo} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <iframe
+              ref={iframeRef}
+              src={gveVideo}
+              className="w-full rounded-lg"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              frameBorder="0"
+            ></iframe>
+            {!isVideoPlaying && (
+              <div className="flex justify-center mt-4">
+                <button
+                  onClick={handlePlayButtonClick}
+                  className="bg-tech-green text-white px-6 py-3 rounded-full hover:bg-white hover:text-blue-500 hover:outline hover:outline-blue-500 transition-colors"
+                >
+                  Take a 3D Tour of the Workspace
+                </button>
+              </div>
+            )}
           </div>
           <div className="lg:w-1/2">
-          <h3 className="text-2xl font-bold mb-4">Green Village Electricity (GVE)</h3>
-          <p className="text-lg mb-6">Abuja, Nigeria | Smart, Energy-Efficient Workspace</p>
-          <p className="mb-6">
-            Green Village Electricity (GVE) is a leading renewable energy company in Abuja, providing innovative off-grid 
-            and hybrid power solutions to drive sustainable development. Focused on energy access, GVE has delivered 
-            clean electricity to thousands of homes and businesses across Nigeria, promoting efficiency and environmental 
-            responsibility.
-          </p>
+            <h3 className="text-2xl font-bold mb-4">Green Village Electricity (GVE)</h3>
+            <p className="text-lg mb-6">Abuja, Nigeria | Smart, Energy-Efficient Workspace</p>
+            <p className="mb-6">
+              Green Village Electricity (GVE) is a leading renewable energy company in Abuja, providing innovative off-grid 
+              and hybrid power solutions to drive sustainable development. Focused on energy access, GVE has delivered 
+              clean electricity to thousands of homes and businesses across Nigeria, promoting efficiency and environmental 
+              responsibility.
+            </p>
             <ul className="space-y-4">
               {[
                 { icon: Sun, title: "Solar-powered lighting & smart energy systems", description: "Harnessing the power of the sun to provide sustainable energy solutions." },
@@ -88,9 +113,9 @@ export default function FeaturedProject() {
             <h3 className="text-2xl font-bold mb-4">DiNovate</h3>
             <p className="text-lg mb-6">Abuja, Nigeria | Multimedia & Tech Innovation Hub</p>
             <p className="mb-6">
-            In partnership with DiNovate Solutions, we developed a cutting-edge tech hub designed to empower creatives 
-            through training in AI-powered video editing, cinematography, photography, and animation. This initiative 
-            supports skill development and career opportunities in Abuja’s growing multimedia sector.
+              In partnership with DiNovate Solutions, we developed a cutting-edge tech hub designed to empower creatives 
+              through training in AI-powered video editing, cinematography, photography, and animation. This initiative 
+              supports skill development and career opportunities in Abuja’s growing multimedia sector.
             </p>
             <ul className="space-y-4">
               {[

@@ -57,6 +57,10 @@ export default function AboutUs() {
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
   };
 
+  const handleCalendlyClick = () => {
+    window.open("https://calendly.com/mobile/webview_entry?redirect_url=https://calendly.com/miracle-outtabox", "_blank", "noopener noreferrer");
+  };
+
   return (
     <section className="py-16 bg-light-gray" id="about-us">
       <div className="container mx-auto px-4">
@@ -90,7 +94,7 @@ export default function AboutUs() {
           </motion.p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
             <motion.button
-              onClick={() => handleWhatsAppClick("Hello, I'd like to schedule a free workspace strategy call.")}
+              onClick={handleCalendlyClick}
               className="bg-tech-green text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition-colors"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -99,11 +103,13 @@ export default function AboutUs() {
               Schedule a Free Workspace Strategy Call
             </motion.button>
             <motion.a
-              href="#featured-projects"
+              href="https://calendly.com/mobile/webview_entry?redirect_url=https://calendly.com/miracle-outtabox"
               className="bg-deep-blue text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition-colors text-center"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Explore Our Designs
             </motion.a>
