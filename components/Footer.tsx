@@ -48,8 +48,8 @@ const socialLinks = [
   },
   { icon: AtSign, href: "https://www.threads.net/@outtaboxwork?igshid=NTc4MTIwNjQ2YQ==" },
   { icon: MessageSquare, href: "http://wa.me/2347044227870" },
-  { icon: Phone, href: "tel:+2347044227870"}
-  { icon: Pinterest, href: "https://pin.it/3XtUdwslp" },
+  { icon: Phone, href: "tel:+2347044227870"},
+  { icon: Pinterest, href: "https://pin.it/3XtUdwslp" }
 ];
 
 export default function Footer() {
