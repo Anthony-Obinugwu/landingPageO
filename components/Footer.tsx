@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import {
   Facebook,
-  X,
   Instagram,
   Phone,
   Mail,
@@ -46,7 +45,6 @@ const socialLinks = [
     icon: Facebook,
     href: "https://web.facebook.com/people/Outtabox-Future-Forward-Workspaces/61573198970676/",
   },
-  { icon: X, href: "#" },
   { icon: MessageCircle, href: "https://www.threads.net/@outtaboxwork?igshid=NTc4MTIwNjQ2YQ==" },
   { icon: Phone, href: "http://wa.me/2347044227870" },
   { icon: Pinterest, href: "https://pin.it/3XtUdwslp" },
