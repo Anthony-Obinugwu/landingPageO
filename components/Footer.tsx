@@ -1,53 +1,55 @@
 "use client";
 
-import { Facebook, LinkedinIcon as LinkedIn, Instagram, Phone, Mail, MapPin, ChevronRight, MessageCircle } from "lucide-react";
+import { motion } from "framer-motion";
+import {
+  Facebook,
+  X,
+  Instagram,
+  Phone,
+  Mail,
+  MapPin,
+  ChevronRight,
+  MessageCircle,
+  PinIcon as Pinterest,
+} from "lucide-react";
 import Link from "next/link";
-import AnimatedFooterLogo from "./AnimatedFooterLogo";
+import Image from "next/image";
 
 const footerLinks = {
   About: [
-    { name: "Our Story", href: "#" },
-    { name: "Team", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "Press", href: "#" },
+    { name: "Our Story", href: "#about-us" },
+    { name: "Careers", href: "#careers" },
   ],
   Services: [
-    { name: "Workspace Strategy", href: "#" },
-    { name: "Office Design", href: "#" },
-    { name: "Smart Solutions", href: "#" },
-    { name: "Sustainability", href: "#" },
+    { name: "Workspace Strategy", href: "#services" },
+    { name: "Office Design", href: "#services" },
+    { name: "Smart Solutions", href: "#services" },
   ],
   Resources: [
-    { name: "Blog", href: "#" },
-    { name: "Case Studies", href: "#" },
-    { name: "Guides", href: "#" },
-    { name: "Newsletter", href: "#" },
+    { name: "Blog", href: "#blog-insights" },
+    { name: "Design Catalog", href: "#featured-projects" },
   ],
   Support: [
-    { name: "Contact", href: "#" },
-    { name: "FAQs", href: "#" },
-    { name: "Terms", href: "#" },
-    { name: "Privacy", href: "#" },
+    { name: "Contact", href: "#contact-us" }
   ],
 };
 
 const contactInfo = [
   { icon: Phone, text: "+2347044227870", href: "tel:+2347044227870" },
   { icon: Mail, text: "hello@outtabox.work", href: "mailto:hello@outtabox.work" },
-  { icon: MapPin, text: "Abuja, Nigeria", href: "#" },
+  { icon: MapPin, text: "Abuja, Nigeria" },
 ];
 
 const socialLinks = [
   { icon: Instagram, href: "https://www.instagram.com/outtaboxwork?igsh=MWp4ZDVpNW9tcXlmeQ%3D%3D&utm_source=qr" },
   {
     icon: Facebook,
-    href: "https://www.facebook.com/profile.php?id=61573198970676",
+    href: "https://web.facebook.com/people/Outtabox-Future-Forward-Workspaces/61573198970676/",
   },
-  // { icon: X, href: "#" },
-  { icon: LinkedIn, href: "#" },
-  { icon: MessageCircle, href: "https://www.threads.net/@outtaboxwork?igshid=NTc4MTIwNjQ2YQ=="},
+  { icon: X, href: "#" },
+  { icon: MessageCircle, href: "https://www.threads.net/@outtaboxwork?igshid=NTc4MTIwNjQ2YQ==" },
   { icon: Phone, href: "http://wa.me/2347044227870" },
-  // { icon: Pinterest, href: "https://pin.it/3XtUdwslp" },
+  { icon: Pinterest, href: "https://pin.it/3XtUdwslp" },
 ];
 
 export default function Footer() {
@@ -59,7 +61,19 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
-              <AnimatedFooterLogo />
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+                className="w-10 h-10 mr-2"
+              >
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Outtabox%20Logo-mc6A00B0tjgc93UfWxOs4TOFKrwLEC.png"
+                  alt="Outtabox Logo"
+                  width={40}
+                  height={40}
+                  className="w-full h-full"
+                />
+              </motion.div>
               <span className="text-xl font-bold">Outtabox</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-sm">

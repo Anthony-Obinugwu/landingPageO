@@ -59,12 +59,14 @@ export default function FeaturedProject() {
             </video>
           </div>
           <div className="lg:w-1/2">
-            <h3 className="text-2xl font-bold mb-4">Green Village Electricity (GVE)</h3>
-            <p className="text-lg mb-6">Abuja, Nigeria | Smart, Energy-Efficient Workspace</p>
-            <p className="mb-6">
-              We partnered with GVE, a leader in renewable energy, to design a workspace that reflects sustainability,
-              efficiency, and innovation. This project integrates:
-            </p>
+          <h3 className="text-2xl font-bold mb-4">Green Village Electricity (GVE)</h3>
+          <p className="text-lg mb-6">Abuja, Nigeria | Smart, Energy-Efficient Workspace</p>
+          <p className="mb-6">
+            Green Village Electricity (GVE) is a leading renewable energy company in Abuja, providing innovative off-grid 
+            and hybrid power solutions to drive sustainable development. Focused on energy access, GVE has delivered 
+            clean electricity to thousands of homes and businesses across Nigeria, promoting efficiency and environmental 
+            responsibility.
+          </p>
             <ul className="space-y-4">
               {[
                 { icon: Sun, title: "Solar-powered lighting & smart energy systems", description: "Harnessing the power of the sun to provide sustainable energy solutions." },
@@ -84,10 +86,11 @@ export default function FeaturedProject() {
           </div>
           <div className="lg:w-1/2">
             <h3 className="text-2xl font-bold mb-4">DiNovate</h3>
-            <p className="text-lg mb-6">Lagos, Nigeria | Innovative Tech Hub</p>
+            <p className="text-lg mb-6">Abuja, Nigeria | Multimedia & Tech Innovation Hub</p>
             <p className="mb-6">
-              A media space in Abuja which wee collaborated with DiNovate to create a cutting-edge tech hub that fosters innovation and collaboration.
-              This project showcases:
+            In partnership with DiNovate Solutions, we developed a cutting-edge tech hub designed to empower creatives 
+            through training in AI-powered video editing, cinematography, photography, and animation. This initiative 
+            supports skill development and career opportunities in Abuja’s growing multimedia sector.
             </p>
             <ul className="space-y-4">
               {[
@@ -108,10 +111,11 @@ export default function FeaturedProject() {
           </div>
           <div className="lg:w-1/2">
             <h3 className="text-2xl font-bold mb-4">Areai</h3>
-            <p className="text-lg mb-6">Abuja, Nigeria | AI Research Center</p>
+            <p className="text-lg mb-6">Abuja, Nigeria | Educational Innovation Hub</p>
             <p className="mb-6">
-              For Areai, we designed a futuristic AI research center that combines functionality with inspiration. Key
-              features include:
+              We collaborated with AREAi to create a learning hub that supports underserved communities through offline, 
+              self-assisted technology. This initiative aligns with AREAi’s mission to bridge literacy and numeracy gaps, 
+              impacting over 25,000 children across 10 refugee camps and earning recognition as a 2024 WISE Prize finalist.
             </p>
             <ul className="space-y-4">
               {[
