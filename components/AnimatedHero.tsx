@@ -87,6 +87,7 @@ const AnimatedHero: React.FC = () => {
               >
                 #1 Future Forward Workspaces designer in Abuja, Nigeria
               </motion.p>
+              <motion.a href="#services">
               <motion.button
                 className="bg-tech-green text-white font-bold py-2 md:py-3 px-4 md:px-6 rounded-lg transition duration-300 hover:bg-white hover:text-tech-green hover:border-2 hover:border-tech-green"
                 whileHover={{ scale: 1.05 }}
@@ -95,6 +96,7 @@ const AnimatedHero: React.FC = () => {
               >
                 Explore Our Services
               </motion.button>
+              </motion.a>
             </div>
           </motion.div>
         </div>

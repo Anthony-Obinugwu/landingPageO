@@ -103,12 +103,11 @@ export default function AboutUs() {
               Schedule a Free Workspace Strategy Call
             </motion.button>
             <motion.a
-              href="https://calendly.com/mobile/webview_entry?redirect_url=https://calendly.com/miracle-outtabox"
+              href="#featured-projects"
               className="bg-deep-blue text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition-colors text-center"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
-              target="_blank"
               rel="noopener noreferrer"
             >
               Explore Our Designs
