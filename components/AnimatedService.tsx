@@ -7,6 +7,7 @@ interface AnimatedServiceProps {
   title: string;
   description: string;
   image: string;
+  cta: string;
   whatsappMessage: string;
   index: number;
   onClick: () => void;
@@ -18,7 +19,7 @@ const AnimatedService: React.FC<AnimatedServiceProps> = ({
   title,
   description,
   image,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  cta,
   whatsappMessage,
   index,
   onClick,
@@ -54,7 +55,7 @@ const AnimatedService: React.FC<AnimatedServiceProps> = ({
           }`}
           onClick={onClick}
         >
-          Let's get in Touch
+          {cta}
         </button>
       </div>
     </motion.div>

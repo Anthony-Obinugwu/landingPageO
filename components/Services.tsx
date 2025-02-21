@@ -5,42 +5,55 @@ import AnimatedService from "./AnimatedService";
 
 const services = [
   {
-    title: "Workspace Strategy & Consulting",
-    description: "Tailored solutions for your unique workspace needs.",
-    image: "/pictures/remote.jpeg",
-    whatsappMessage: "I would like to inquire about your Workspace Strategy & Consulting services.",
+    title: "Elite Shared Office in Abuja",
+    description: "Office space planning & workspace optimization. Hybrid & remote-work solutions.",
+    image: "/pictures/Hybrid-Workspace.jpg",
+    cta: "Optimize Your Workspace",
+    whatsappMessage: "I'm interested in an elite shared office in Abuja with high-speed Wi-Fi and 24/7 access.",
+    alt: "Best coworking space in Abuja with 24/7 access, fast Wi-Fi, and comfortable workstations",
   },
   {
-    title: "Office Interior Design & Fit-Out",
-    description: "Creating inspiring and functional office environments.",
-    image: "/pictures/Interior.jpeg",
-    whatsappMessage: "I'm interested in your Office Interior Design & Fit-Out services.",
+    title: "All-Inclusive Business Offices",
+    description: "Custom office layouts, furniture & branding. Corporate headquarters, startups & innovation hubs.",
+    image: "/pictures/workspace-1.jpeg",
+    cta: "Design Your Office",
+    whatsappMessage: "I'd like to know more about all-inclusive business offices in Abuja with modern meeting rooms.",
+    alt: "Fully serviced office space in Abuja with conference rooms and virtual office options",
   },
   {
-    title: "Hybrid & Remote-Ready Workspaces",
-    description: "Designing for the future of flexible work.",
-    image: "/pictures/remote.jpeg",
-    whatsappMessage: "I want to learn more about your Hybrid & Remote-Ready Workspace solutions.",
+    title: "Intelligent & Eco-Conscious Workspaces",
+    description: "AI-powered lighting, smart desks & automation. Eco-friendly & wellness-focused workplace designs.",
+    image: "/pictures/workspace-2.jpeg",
+    cta: "Go Smart & Sustainable",
+    whatsappMessage: "I'm interested in intelligent and eco-conscious workspaces in Abuja with automated features.",
+    alt: "Top-rated business hub in Abuja offering flexible office rentals and networking events",
   },
   {
-    title: "Smart & Sustainable Office Solutions",
-    description: "Eco-friendly and technologically advanced office spaces.",
-    image: "/pictures/smart.jpeg",
-    whatsappMessage: "I'm curious about your Smart & Sustainable Office Solutions.",
+    title: "Private Suites & Corporate Lounges",
+    description: "Private offices, meeting hubs & co-working spaces. Future-forward designs for C-Suite executives.",
+    image: "/pictures/workspace-3.jpeg",
+    cta: "Elevate Your Executive Space",
+    whatsappMessage: "I want to learn about private office suites and corporate lounges in Abuja.",
+    alt: "Professional shared workspace in Abuja with ergonomic seating and private meeting rooms",
   },
   {
-    title: "Corporate & Commercial Space Development",
-    description: "Comprehensive solutions for large-scale projects.",
-    image: "/pictures/commercial.jpeg",
-    whatsappMessage: "I'd like information on your Corporate & Commercial Space Development services.",
+    title: "Budget-Friendly & Trendy Offices",
+    description: "Future-ready hybrid workspace built for energy innovation.",
+    image: "/pictures/workspace-4.jpeg",
+    cta: "Innnovate Your Workspace",
+    whatsappMessage: "I'm looking for budget-friendly and trendy offices in Abuja for freelancers and startups.",
+    alt: "Affordable and stylish office space in Abuja for freelancers, startups, and corporate teams",
   },
   {
-    title: "Custom Furniture & Workspace Accessories",
-    description: "Bespoke furnishings tailored to your brand and needs.",
-    image: "/pictures/custom.jpeg",
-    whatsappMessage: "I'm interested in your Custom Furniture & Workspace Accessories offerings.",
+    title: "Cutting-Edge Innovation Hubs",
+    description: "Agile, modern workspace built for Nigeria's top tech innovators.",
+    image: "/pictures/workspace-5.jpg",
+    cta: "Give your workspace a tech upgrade",
+    whatsappMessage: "Can you tell me more about cutting-edge innovation hubs in Abuja for entrepreneurs?",
+    alt: "Innovative tech workspace in Abuja for creative professionals and entrepreneurs",
   },
 ];
+
 
 export default function Services() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -52,9 +65,8 @@ export default function Services() {
   };
 
   return (
-    <section className="py-16" id="services">
+    <section className="py-16 bg-light-gray" id="services">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <AnimatedService
@@ -62,6 +74,7 @@ export default function Services() {
               title={service.title}
               description={service.description}
               image={service.image}
+              cta={service.cta}
               whatsappMessage={service.whatsappMessage}
               index={index}
               onClick={() => handleWhatsAppClick(service.whatsappMessage)}

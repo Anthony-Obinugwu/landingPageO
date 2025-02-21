@@ -9,20 +9,28 @@ const gveVideo = "https://www.youtube.com/embed/-vL4HXeWeyg";
 
 const areaiImages = [
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7%20(2)-DbzRswJxGLYcDvBiNMx0vmwbIRQI2y.png",
-    alt: "AREAi Podcast Studio",
+    src: "/pictures/Aeai-1.jpeg",
+    alt: "Modern coworking space in Abuja with high-speed internet and private offices",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7%20(4)-E0SXzyFyVV00yd5p8sXSpT8oOWCoGJ.png",
-    alt: "AREAi Recording Setup",
+    src: "/pictures/Areai-2.jpeg",
+    alt: "Best office space in Abuja for startups, remote workers, and businesses",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7%20(3)-voDkf4BWvvmv5jLIwESiqm89y44TQE.png",
-    alt: "AREAi Workstation Area",
+    src: "/pictures/Areai-3.jpeg",
+    alt: "Premium shared workspace in Abuja with meeting rooms and networking opportunities",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7%20(5)-KlU2DmSdskMqYDtfsZKzHZARSPk0FP.png",
-    alt: "AREAi Conference Room",
+    src: "/pictures/Areai-4.jpeg",
+    alt: "Top-rated Abuja office space with flexible desks and corporate amenities",
+  },
+  {
+    src: "/pictures/Areai-5.jpeg",
+    alt: "Luxury serviced offices in Abuja with a vibrant work environment",
+  },
+  {
+    src: "/pictures/Areai-6.jpeg",
+    alt: "State-of-the-art coworking space in Abuja with premium office facilities and business support",
   },
 ];
 
