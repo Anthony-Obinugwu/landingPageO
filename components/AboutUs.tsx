@@ -58,7 +58,7 @@ export default function AboutUs() {
   };
 
   const handleCalendlyClick = () => {
-    window.open("https://calendly.com/mobile/webview_entry?redirect_url=https://calendly.com/miracle-outtabox", "_blank", "noopener noreferrer");
+    window.open("https://calendly.com/sonia-outtabox", "_blank", "noopener noreferrer");
   };
 
   return (
