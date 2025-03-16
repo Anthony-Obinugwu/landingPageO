@@ -22,7 +22,7 @@ const convertToEmbedLink = (url: string) => {
 };
 
 export default function IndependentWorkShowcase() {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex] = useState(0)
 
   return (
     <section className="py-16 bg-light-gray" id="independent-work">
