@@ -61,8 +61,14 @@ module.exports = {
       animation: {
         pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
+      aspectRatio: {
+        '16/9': [16, 9],
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require('@tailwindcss/aspect-ratio'),
+  ],
 }
 
