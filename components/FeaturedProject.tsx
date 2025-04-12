@@ -8,7 +8,6 @@ import type { LucideIcon } from "lucide-react";
 
 
 const gveVideo = "https://www.youtube.com/embed/-vL4HXeWeyg";
-const gveThumbnail = "/pictures/GVE-pic.jpeg";
 
 const areaiImages = [
   {
@@ -104,15 +103,6 @@ const renderProjectSection = (
 export default function FeaturedProject() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
-
-  const handlePlayButtonClick = useCallback(() => {
-    console.log("Button clicked"); // Debugging log
-    if (iframeRef.current && !isVideoPlaying) {
-      console.log("Playing video..."); // Debugging log
-      iframeRef.current.src = `${gveVideo}?autoplay=1&mute=1`;
-      setIsVideoPlaying(true);
-    }
-  }, [isVideoPlaying]);
 
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-light-gray" id="featured-projects">

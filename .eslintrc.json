@@ -1,7 +1,9 @@
 {
   "extends": ["next/core-web-vitals", "next/typescript"],
   "rules": {
-    "react/no-unescaped-entities": "off"
+    "react/no-unescaped-entities": "off",
+    // Allow unused variables prefixed with an underscore
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }]
   }
 }
 
