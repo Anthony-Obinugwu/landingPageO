@@ -1,8 +1,7 @@
 "use client";
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { useState, useRef, useCallback } from "react";
 import { Sun, Users, Leaf, Zap, Cpu, Lightbulb } from "lucide-react";
-import Image from "next/image";
 import ImageSlideshow from "./ImageSlideshow"; // Import the slideshow component
 import AnimatedFeature from "./AnimatedFeature";
 import type { LucideIcon } from "lucide-react";
