@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
+
 const AnimatedGetInTouch: React.FC = () => {
   return (
     <section className="py-20 bg-deep-blue text-white">

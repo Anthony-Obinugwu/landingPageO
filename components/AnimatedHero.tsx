@@ -3,106 +3,105 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
+export default function AnimatedHero() {
+  // Image optimization specs
+  const heroImage = {
+    src: "/pictures/hero-image.jpeg", 
+    alt: "Modern workspace design by Outtabox",
+    width: 2880, // Original width
+    height: 1620, // Original height (16:9 ratio)
+    quality: 85, // Optimal compression
+    priority: true, // Preload for LCP
+  };
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
-
-const AnimatedHero: React.FC = () => {
   return (
-    <section className="relative h-[70vh] md:h-[80vh] mt-14 mx-2 md:mx-4 rounded-2xl overflow-hidden shadow-2xl">
-      <motion.div
-        animate={{
-          y: [0, -10, 0],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Number.POSITIVE_INFINITY,
-          ease: "easeInOut",
-        }}
-        className="w-full h-full"
-      >
-        <motion.div
-          initial={{ scale: 1.2, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5 }}
-          className="absolute inset-0"
-        >
-          <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Untitled%20design%20(81)-Zzi7lYpKOLLRWBsuLLa2uWTQxA17x9.png"
-            alt="Modern Office Space"
-            fill
-            className="object-cover"
-            priority
-            quality={100}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-deep-blue/80 to-transparent" />
-        </motion.div>
+    <section className="relative h-screen min-h-[800px] w-full overflow-hidden">
+      {/* Background Image with Optimized Settings */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={heroImage.src}
+          alt={heroImage.alt}
+          fill
+          priority={heroImage.priority}
+          quality={heroImage.quality}
+          className="object-cover object-center"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/30" />
+      </div>
 
-        <div className="relative h-full">
+      {/* Animated Content */}
+      <div className="relative z-10 h-full flex items-center">
+        <div className="container mx-auto px-6">
           <motion.div
-            className="container mx-auto h-full flex items-center"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="max-w-2xl"
           >
-            <div className="max-w-2xl space-y-4 md:space-y-6 p-4 md:p-8">
-              <motion.h1
-                className="text-3xl md:text-4xl lg:text-6xl font-bold text-white drop-shadow-lg"
-                variants={itemVariants}
-                animate={{
-                  y: [0, -5, 0],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "easeInOut",
-                  delay: 0.5,
-                }}
+            <motion.h1
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
+            >
+              Future Forward Workspaces <span className="text-tech-green">Workspaces</span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              className="text-lg md:text-xl text-white/90 mb-8"
+            >
+              #1 Future Forward Workspaces designer in Abuja, Nigeria
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.9 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <a
+                href="#contact-us"
+                className="bg-tech-green hover:bg-tech-green/90 text-white font-bold py-3 px-8 rounded-full text-center transition-colors"
               >
-                Future Forward Workspaces
-              </motion.h1>
-              <motion.p
-                className="text-lg md:text-xl text-white/90 drop-shadow-lg"
-                variants={itemVariants}
-                animate={{
-                  y: [0, -5, 0],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "easeInOut",
-                  delay: 0.7,
-                }}
+                Get Started
+              </a>
+              <a
+                href="#featured-projects"
+                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-bold py-3 px-8 rounded-full text-center transition-colors"
               >
-                #1 Future Forward Workspaces designer in Abuja, Nigeria
-              </motion.p>
-              <motion.a href="#services">
-              <motion.button
-                className="bg-tech-green text-white font-bold py-2 md:py-3 px-4 md:px-6 rounded-lg transition duration-300 hover:bg-white hover:text-tech-green hover:border-2 hover:border-tech-green"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                variants={itemVariants}
-              >
-                Explore Our Services
-              </motion.button>
-              </motion.a>
-            </div>
+                View Projects
+              </a>
+            </motion.div>
           </motion.div>
         </div>
+      </div>
+
+      {/* Animated Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5 }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+      >
+        <motion.div
+          animate={{ y: [0, 15, 0] }}
+          transition={{ repeat: Infinity, duration: 2 }}
+          className="flex flex-col items-center"
+        >
+          <span className="text-white text-sm mb-2">Scroll</span>
+          <div className="w-5 h-8 border-2 border-tech-green rounded-full flex justify-center">
+            <motion.div
+              animate={{ y: [0, 5], opacity: [0.5, 1] }}
+              transition={{ repeat: Infinity, duration: 1.5, repeatType: "reverse" }}
+              className="w-1 h-2 bg-tech-green rounded-full mt-1"
+            />
+          </div>
+        </motion.div>
       </motion.div>
     </section>
   );
-};
-
-export default AnimatedHero;
+}

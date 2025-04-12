@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import AnimatedHeaderLogo from "./AnimatedHeaderLogo";
 
 const primaryNavItems = [
@@ -21,75 +22,77 @@ export default function Header() {
   const handleClick = (href: string) => {
     setIsMobileMenuOpen(false);
     const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    if (element) element.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white z-50 border-b border-gray-200">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-14">
-          <div className="flex items-center space-x-8">
-            <Link href="/" className="flex items-center">
+    <>
+      {/* Desktop Header */}
+      <header className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
+        <div className="container mx-auto px-6 py-2">
+          <div className="flex items-center justify-between h-12">
+            <Link href="/" className="flex items-center group">
               <AnimatedHeaderLogo />
-              <span className="text-lg font-semibold">Outtabox</span>
+              <span className="ml-2 text-xl font-bold text-deep-blue group-hover:text-tech-green transition-colors">
+                Outtabox
+              </span>
             </Link>
 
-            <nav className="hidden md:flex items-center space-x-6">
+            <nav className="hidden md:flex items-center space-x-8">
               {primaryNavItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => handleClick(item.href)}
-                  className="text-sm hover:text-tech-green transition-colors duration-300"
+                  className="relative group text-sm font-medium text-gray-700 hover:text-tech-green transition-colors"
                 >
                   {item.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-tech-green transition-all duration-300 group-hover:w-full"></span>
                 </button>
               ))}
             </nav>
-          </div>
 
-          <div className="flex items-center">
             <button
-              className="md:hidden p-2 hover:bg-gray-100 rounded-full"
+              className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              <Menu className="w-5 h-5" />
+              <Menu className="w-6 h-6 text-deep-blue" />
             </button>
           </div>
         </div>
-      </div>
+      </header>
 
       {/* Mobile Menu */}
-      <div
-        className={`fixed inset-y-0 right-0 w-2/3 bg-tech-green z-50 md:hidden transform transition-transform duration-300 ease-in-out ${
-          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+      <motion.div
+        initial={{ x: '100%' }}
+        animate={{ x: isMobileMenuOpen ? 0 : '100%' }}
+        transition={{ type: 'tween', ease: 'easeInOut' }}
+        className="fixed inset-y-0 right-0 w-4/5 bg-white z-50 shadow-2xl md:hidden"
       >
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex justify-between items-center mb-6">
-            <Link href="/" className="flex items-center">
-              <AnimatedHeaderLogo />
-              <span className="text-lg font-semibold text-white">Outtabox</span>
-            </Link>
-            <button className="p-2 hover:bg-deep-blue rounded-full" onClick={() => setIsMobileMenuOpen(false)}>
-              <X className="w-5 h-5 text-white" />
-            </button>
-          </div>
-          <nav className="space-y-4">
-            {primaryNavItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => handleClick(item.href)}
-                className="block w-full text-left text-lg text-white hover:bg-deep-blue hover:font-bold py-2 px-4 rounded transition-all duration-300"
-              >
-                {item.name}
-              </button>
-            ))}
-          </nav>
+        <div className="flex justify-between items-center p-6 border-b border-gray-200">
+          <Link href="/" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
+            <AnimatedHeaderLogo />
+            <span className="ml-2 text-xl font-bold text-deep-blue">Outtabox</span>
+          </Link>
+          <button 
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="p-2 rounded-full hover:bg-gray-100"
+          >
+            <X className="w-6 h-6 text-gray-500" />
+          </button>
         </div>
-      </div>
-    </header>
+
+        <nav className="p-6 space-y-4">
+          {primaryNavItems.map((item) => (
+            <button
+              key={item.name}
+              onClick={() => handleClick(item.href)}
+              className="block w-full text-left py-3 px-4 text-gray-800 hover:bg-tech-green/10 hover:text-tech-green rounded-lg transition-colors"
+            >
+              {item.name}
+            </button>
+          ))}
+        </nav>
+      </motion.div>
+    </>
   );
 }
-

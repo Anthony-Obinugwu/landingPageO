@@ -15,3 +15,55 @@ h6 {
   @apply font-montserrat font-bold;
 }
 
+/* Button hover effect */
+.hover-scale {
+  transition: transform 0.2s ease;
+}
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Link underline animation */
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+.link-underline:hover::after {
+  width: 100%;
+}
+@layer utilities {
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+  }
+}
+/* iPhone 13+ Specific Adjustments (390px-428px) */
+@media (max-width: 428px) {
+  .header-logo-text {
+    font-size: 1.1rem; /* Slightly larger text for readability */
+  }
+  
+  .mobile-menu-item {
+    padding: 0.75rem 1rem; /* Larger tap targets */
+  }
+
+  /* Prevent zooming on input focus */
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+}
+
+/* Optimize for taller aspect ratios (iPhone 13/14 Pro) */
+@media (min-height: 844px) and (max-width: 428px) {
+  .mobile-menu {
+    padding-top: 2rem; /* Extra spacing for notch */
+  }
+}
