@@ -60,7 +60,7 @@ const TestimonialCarousel = () => {
   }, [isInView, controls]);
 
   return (
-    <section ref={containerRef} className="py-20 bg-white" id="testimonials">
+    <section ref={containerRef} className="py-20 bg-white" id="reviews">
       <div className="container mx-auto px-4 overflow-hidden">
         <motion.h2
           className="text-3xl font-bold text-center mb-12"
