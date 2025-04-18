@@ -6,12 +6,12 @@ import Image from "next/image";
 export default function AnimatedHero() {
   // Image optimization specs
   const heroImage = {
-    src: "/pictures/hero-image.jpeg", 
+    src: "/pictures/Hero Image.jpeg", 
     alt: "Modern workspace design by Outtabox",
     width: 2880, // Original width
     height: 1620, // Original height (16:9 ratio)
-    quality: 85, // Optimal compression
-    priority: true, // Preload for LCP
+    quality: 85, 
+    priority: true, 
   };
 
   return (

@@ -17,27 +17,27 @@ const works = [
   {
     type: "image",
     src: "/pictures/workspace-2.jpeg",
-    description: "Team collaboration in action",
-  },
-  {
-    type: "image",
-    src: "/pictures/workspace-3.jpeg",
-    description: "Modern office setup",
-  },
-  {
-    type: "image",
-    src: "/pictures/workspace-4.jpeg",
-    description: "Innovative brainstorming session",
-  },
-  {
-    type: "image",
-    src: "/pictures/workspace-5.jpg",
     description: "Relaxation area for employees",
   },
   {
     type: "image",
-    src: "/pictures/workspace-1.jpeg",
-    description: "High-tech meeting room",
+    src: "/pictures/workspace-3.jpeg",
+    description: "Modern meeting area setup",
+  },
+  {
+    type: "image",
+    src: "/pictures/workspace-4.jpeg",
+    description: "Strategic Office Divisons",
+  },
+  {
+    type: "image",
+    src: "/pictures/workspace-5.jpg",
+    description: "Modern Personal Offices",
+  },
+  {
+    type: "image",
+    src: "/pictures/Spaceful Lounge.jpeg",
+    description: "Multi-Purposeful Hall",
   },
 ]
 

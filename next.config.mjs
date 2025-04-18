@@ -9,7 +9,7 @@ const nextConfig = {
     ],
   },
   eslint: {
-    ignoreDuringBuilds: true, // Completely disables ESLint during builds
+    ignoreDuringBuilds: true, 
   },
 };
 

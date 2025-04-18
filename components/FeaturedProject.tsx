@@ -1,8 +1,8 @@
 "use client";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { useState, useRef, useCallback } from "react";
-import { Sun, Users, Leaf, Zap, Cpu, Lightbulb } from "lucide-react";
-import ImageSlideshow from "./ImageSlideshow"; // Import the slideshow component
+import { Sun, Users, Leaf, Zap, Cpu, Lightbulb, PlugZap2 } from "lucide-react";
+import ImageSlideshow from "./ImageSlideshow"; 
 import AnimatedFeature from "./AnimatedFeature";
 import type { LucideIcon } from "lucide-react";
 
@@ -48,6 +48,60 @@ const dnovateImages = [
   {
     src: "/pictures/DiNovate1.jpeg",
     alt: "DNovate meeting area",
+  },
+];
+
+const homeMallImages = [
+  {
+    src: "/pictures/Home Mall.png", 
+    alt: "Home Mall showroom zone",
+  },
+  {
+    src: "/pictures/Home Mall1.png", 
+    alt: "Home Mall workspace",
+  },
+  {
+    src: "/pictures/Home Mall2.png", 
+    alt: "Home Mall collaboration area",
+  },
+  {
+    src: "/pictures/Home Mall3.png",
+    alt: "Home Mall collaboration area",
+  },
+  {
+    src: "/pictures/Home Mall4.png",
+    alt: "Home Mall collaboration area",
+  },
+  {
+    src: "/pictures/Home Mall5.png",
+    alt: "Home Mall collaboration area",
+  },
+  {
+    src: "/pictures/Home Mall6.png",
+    alt: "Home Mall collaboration area",
+  },
+  {
+    src: "/pictures/Home Mall7.png",
+    alt: "Home Mall collaboration area",
+  },
+];
+
+const eduvacityImages = [
+  {
+    src: "/pictures/Eduvacity1.jpeg", // Replace with the actual image path
+    alt: "Eduvacity Small Office Space",
+  },
+  {
+    src: "/pictures/Eduvacity2.jpeg", // Replace with the actual image path
+    alt: "Eduvacity Small Office Space",
+  },
+  {
+    src: "/pictures/Eduvacity3.jpeg", // Replace with the actual image path
+    alt: "Eduvacity Training Center",
+  },
+  {
+    src: "/pictures/Eduvacity4.jpeg", // Replace with the actual image path
+    alt: "Eduvacity Front Desk",
   },
 ];
 
@@ -145,6 +199,54 @@ export default function FeaturedProject() {
             { icon: Cpu, title: "Advanced computing labs and data centers", description: "High-tech labs and data centers for cutting-edge research." },
             { icon: Users, title: "Collaborative spaces for interdisciplinary research", description: "Spaces designed to foster collaboration across different fields." },
             { icon: Lightbulb, title: "Innovative lighting and acoustics for optimal work conditions", description: "Lighting and acoustics designed to enhance productivity." },
+          ]
+        )}
+
+        {renderProjectSection(
+          homeMallImages,
+          "Home Mall International Co. Ltd",
+          "Central Business District, Abuja | Experience Center + Workspace Fit-Out",
+          "Outtabox delivered a transformative 900 sqm design for Home Mall International Company that seamlessly merges a cutting-edge experience center with a high-performance workspace. Designed to elevate brand immersion and operational excellence, the layout redefines how retail and corporate functions coexist under one roof. The space was conceptualized to create a fluid customer journey — from curated product display zones and digital interaction pods to agile workstations and private meeting areas. Every square meter was optimized for both client experience and staff productivity.",
+          [
+            {
+              icon: Zap, 
+              title: "Immersive showroom zones with interactive displays",
+              description: "Curated product displays and digital interaction pods designed to captivate customers and enhance brand immersion.",
+            },
+            {
+              icon: Users, 
+              title: "Agile workspace with collaboration zones",
+              description: "Open-plan workstations, private focus booths, and team collaboration areas to boost productivity and teamwork.",
+            },
+            {
+              icon: Lightbulb, 
+              title: "Smart lighting and zoning for engagement",
+              description: "Innovative ceiling lighting and spatial zoning to guide flow and create an inspiring environment.",
+            },
+          ]
+        )}
+
+        {renderProjectSection(
+          eduvacityImages,
+          "Eduvacity",
+          "Global | Education Technology Platform",
+          "Eduvacity is an innovative education technology platform that bridges the gap between academia and industry by offering project-based learning, professional certifications, and career acceleration programs. Designed for students and professionals, it combines hands-on training with mentorship to equip learners with in-demand skills (like AI, data science, and cloud computing) while connecting them to real-world opportunities. The platform collaborates with universities, corporations, and governments to create tailored upskilling solutions that address workforce gaps globally.",
+          [
+            {
+              icon: Cpu, 
+              title: "Industry-Aligned Certifications",
+              description: "Offers accredited programs co-developed with tech leaders (e.g., AWS, Microsoft) to ensure relevance and employability.",
+            },
+            {
+              icon: Lightbulb, 
+              title: "Project-Based Learning",
+              description: "Learners work on real-world case studies and capstone projects, building portfolios that showcase practical expertise.",
+            },
+            {
+              icon: Users, 
+              title: "Career Pipeline",
+              description: "Direct partnerships with employers provide job placements, internships, and networking opportunities for graduates.",
+            },
           ]
         )}
       </div>
