@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
 const reviews = [
   {
     text: "Outtabox understood our vision from day one. The team delivered a vibrant, functional space that reflects our mission and energizes our staff. Their creativity and professionalism were unmatched.",
-    author: "Gideon Olanrewaju",
+    author: "Mr. Gideon Olanrewaju",
     position: "CEO",
     company: "AREAi",
     rating: 5
@@ -20,26 +20,25 @@ const reviews = [
   },
   {
     text: "Outtabox transformed our office into a creative powerhouse. The team's attention to detail and innovative design solutions have significantly boosted our productivity.",
-    author: "Mrs. Iwali Akwaji",
+    author: "Musa Ibrahim Abbah",
     position: "CEO",
-    company: "Tech Innovations Inc.",
+    company: "Eduvacity",
     rating: 5
   },
   {
     text: "Working with Outtabox was a game-changer for our startup. They created a flexible, inspiring workspace that grows with us.",
-    author: "Prof. Ebuka Uzoekwere",
+    author: "Mr. Ifeanyi Orajaka",
     position: "CEO",
-    company: "Future Ventures",
+    company: "Green Village ELectricity",
     rating: 5
   },
   {
     text: "The smart office solutions implemented by Outtabox have not only improved our energy efficiency but also enhanced our team's well-being.",
-    author: "Engr. Ifeanyi Emmanuel",
+    author: "Mr. Temidayo Ibitoye",
     position: "CEO",
-    company: "Green Solutons Co.",
+    company: "DiNoavte",
     rating: 5
   },
-  // Add more reviews...
 ];
 
 const StarIcon = () => (
@@ -63,7 +62,7 @@ const TestimonialCarousel = () => {
     <section ref={containerRef} className="py-20 bg-white" id="reviews">
       <div className="container mx-auto px-4 overflow-hidden">
         <motion.h2
-          className="text-3xl font-bold text-center mb-12"
+          className="text-3xl font-bold text-c  a enter mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={controls}
           variants={{
