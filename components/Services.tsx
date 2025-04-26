@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import AnimatedService from "./AnimatedService";
+import { ArrowRight } from "lucide-react";
 
 const services = [
   {
@@ -27,30 +29,6 @@ const services = [
     cta: "Go Smart & Sustainable",
     whatsappMessage: "I'm interested in intelligent and eco-conscious workspaces in Abuja with automated features.",
     alt: "Top-rated business hub in Abuja offering flexible office rentals and networking events",
-  },
-  {
-    title: "Private Suites & Corporate Lounges",
-    description: "Private offices, meeting hubs & co-working spaces. Future-forward designs for C-Suite executives.",
-    image: "/pictures/workspace-3.jpeg",
-    cta: "Elevate Your Executive Space",
-    whatsappMessage: "I want to learn about private office suites and corporate lounges in Abuja.",
-    alt: "Professional shared workspace in Abuja with ergonomic seating and private meeting rooms",
-  },
-  {
-    title: "Budget-Friendly & Trendy Offices",
-    description: "Future-ready hybrid workspace built for energy innovation.",
-    image: "/pictures/workspace-4.jpeg",
-    cta: "Innnovate Your Workspace",
-    whatsappMessage: "I'm looking for budget-friendly and trendy offices in Abuja for freelancers and startups.",
-    alt: "Affordable and stylish office space in Abuja for freelancers, startups, and corporate teams",
-  },
-  {
-    title: "Cutting-Edge Innovation Hubs",
-    description: "Agile, modern workspace built for Nigeria's top tech innovators.",
-    image: "/pictures/workspace-5.jpg",
-    cta: "Give your workspace a tech upgrade",
-    whatsappMessage: "Can you tell me more about cutting-edge innovation hubs in Abuja for entrepreneurs?",
-    alt: "Innovative tech workspace in Abuja for creative professionals and entrepreneurs",
   },
 ];
 
@@ -82,6 +60,15 @@ export default function Services() {
               setHoveredIndex={setHoveredIndex}
             />
           ))}
+        </div>
+        <div className="text-center mt-12">
+          <Link 
+            href="/services" 
+            className="inline-flex items-center text-tech-green font-semibold hover:underline transition-colors group"
+          >
+            View All Workspace Solutions
+            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Link>
         </div>
       </div>
     </section>

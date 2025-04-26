@@ -67,3 +67,7 @@ h6 {
     padding-top: 2rem; /* Extra spacing for notch */
   }
 }
+
+.whitespace-pre-line {
+  white-space: pre-line;
+}

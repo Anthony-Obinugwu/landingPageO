@@ -91,7 +91,7 @@ const AnimatedTrustedCompanies = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Our Past and Trusted Clients
+          Our Past clients and Team Experience
         </motion.h2>
 
         {/* Featured Companies */}
@@ -132,8 +132,16 @@ const AnimatedTrustedCompanies = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            Our team has also made contributions to:
+            Also, our team members have also been major parts of these projects in various capacities: 
           </motion.h3>
+          <div className="text-left md:text-center text-gray-700 text-base leading-relaxed pb-12">
+    <ul className="list-disc list-inside md:list-none md:space-y-2">
+      <li>MTN Offices | Innovation Hubs</li>
+      <li>PiggyVest and Pocket | PWC Towers</li>
+      <li>International Airport Terminals</li>
+      <li>Flutterwave | Google | Twitter</li>
+    </ul>
+  </div>
 
           <div className="flex flex-wrap justify-center gap-3 md:gap-4">
             {companies.contributed.map((company, index) => (
