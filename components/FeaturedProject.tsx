@@ -1,55 +1,10 @@
 "use client";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { useState, useRef, useCallback } from "react";
-import { Sun, Users, Leaf, Zap, Cpu, Lightbulb, PlugZap2 } from "lucide-react";
+import { useState, useRef } from "react";
+import { Zap, Users, Lightbulb, Cpu } from "lucide-react";
 import ImageSlideshow from "./ImageSlideshow"; 
 import AnimatedFeature from "./AnimatedFeature";
 import type { LucideIcon } from "lucide-react";
-
-
-const gveVideo = "https://www.youtube.com/embed/-vL4HXeWeyg";
-
-const areaiImages = [
-  {
-    src: "/pictures/Aeai-1.jpg",
-    alt: "Areai coworking space",
-  },
-  {
-    src: "/pictures/Areai-2.jpeg",
-    alt: "Areai office space",
-  },
-  {
-    src: "/pictures/Areai-3.jpeg",
-    alt: "Areai meeting rooms",
-  },
-  {
-    src: "/pictures/Areai-4.jpeg",
-    alt: "Areai workspace",
-  },
-  {
-    src: "/pictures/Areai-5.jpeg",
-    alt: "Areai facilities",
-  },
-  {
-    src: "/pictures/Areai-6.jpeg",
-    alt: "Areai business center",
-  },
-];
-
-const dnovateImages = [
-  {
-    src: "/pictures/DiNovate3.jpeg",
-    alt: "DNovate lounge area",
-  },
-  {
-    src: "/pictures/DiNovate2.jpeg",
-    alt: "DNovate workspace",
-  },
-  {
-    src: "/pictures/DiNovate1.jpeg",
-    alt: "DNovate meeting area",
-  },
-];
 
 const homeMallImages = [
   {
@@ -88,19 +43,19 @@ const homeMallImages = [
 
 const eduvacityImages = [
   {
-    src: "/pictures/Eduvacity1.jpeg", // Replace with the actual image path
+    src: "/pictures/Eduvacity1.jpeg",
     alt: "Eduvacity Small Office Space",
   },
   {
-    src: "/pictures/Eduvacity2.jpeg", // Replace with the actual image path
+    src: "/pictures/Eduvacity2.jpeg",
     alt: "Eduvacity Small Office Space",
   },
   {
-    src: "/pictures/Eduvacity3.jpeg", // Replace with the actual image path
+    src: "/pictures/Eduvacity3.jpeg",
     alt: "Eduvacity Training Center",
   },
   {
-    src: "/pictures/Eduvacity4.jpeg", // Replace with the actual image path
+    src: "/pictures/Eduvacity4.jpeg",
     alt: "Eduvacity Front Desk",
   },
 ];
@@ -116,24 +71,11 @@ const renderProjectSection = (
   title: string,
   location: string,
   description: string,
-  features: FeatureItem[],
-  isVideo = false
+  features: FeatureItem[]
 ) => (
   <div className="flex flex-col lg:flex-row items-start gap-8 md:gap-12 lg:gap-16 mb-20 md:mb-24">
     <div className="lg:w-1/2 w-full">
-      {isVideo ? (
-        <div className="relative aspect-video rounded-lg shadow-lg overflow-hidden bg-gray-100 min-h-[300px]">
-          <iframe
-            src={`${gveVideo}?autoplay=0`} // Autoplay is disabled initially
-            className="absolute inset-0 w-full h-full"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            title="Take a 3D Tour"
-          />
-        </div>
-      ) : (
-        <ImageSlideshow images={images} interval={5000} className="w-full" />
-      )}
+      <ImageSlideshow images={images} interval={5000} className="w-full" />
     </div>
     <div className="lg:w-1/2 w-full">
       <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">{title}</h3>
@@ -155,52 +97,12 @@ const renderProjectSection = (
 );
 
 export default function FeaturedProject() {
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-light-gray" id="featured-projects">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16 text-gray-900">
           Featured Projects
         </h2>
-
-        {renderProjectSection(
-          [],
-          "Green Village Electricity (GVE)",
-          "Abuja, Nigeria | Smart, Energy-Efficient Workspace",
-          "Green Village Electricity (GVE) is a leading renewable energy company in Abuja, providing innovative off-grid and hybrid power solutions to drive sustainable development.",
-          [
-            { icon: Sun, title: "Solar-powered lighting & smart energy systems", description: "Harnessing the power of the sun to provide sustainable energy solutions." },
-            { icon: Users, title: "Collaboration zones & tech-enabled meeting rooms", description: "Spaces designed for teamwork and equipped with the latest technology." },
-            { icon: Leaf, title: "Eco-friendly materials & natural ventilation", description: "Using materials that are kind to the environment and promoting natural airflow." },
-          ],
-          true
-        )}
-
-        {renderProjectSection(
-          dnovateImages,
-          "DiNovate",
-          "Abuja, Nigeria | Multimedia & Tech Innovation Hub",
-          "In partnership with DiNovate Solutions, we developed a cutting-edge tech hub designed to empower creatives through training in AI-powered video editing, cinematography, photography, and animation.",
-          [
-            { icon: Zap, title: "State-of-the-art digital infrastructure", description: "Cutting-edge technology to support all your digital needs." },
-            { icon: Users, title: "Flexible co-working and private office spaces", description: "Versatile spaces that adapt to your working style." },
-            { icon: Leaf, title: "Sustainable design with energy-efficient systems", description: "Designs that prioritize sustainability and energy efficiency." },
-          ]
-        )}
-
-        {renderProjectSection(
-          areaiImages,
-          "Areai",
-          "Abuja, Nigeria | Educational Innovation Hub",
-          "We collaborated with AREAi to create a learning hub that supports underserved communities through offline, self-assisted technology.",
-          [
-            { icon: Cpu, title: "Advanced computing labs and data centers", description: "High-tech labs and data centers for cutting-edge research." },
-            { icon: Users, title: "Collaborative spaces for interdisciplinary research", description: "Spaces designed to foster collaboration across different fields." },
-            { icon: Lightbulb, title: "Innovative lighting and acoustics for optimal work conditions", description: "Lighting and acoustics designed to enhance productivity." },
-          ]
-        )}
 
         {renderProjectSection(
           homeMallImages,
@@ -249,6 +151,19 @@ export default function FeaturedProject() {
             },
           ]
         )}
+
+<div className="text-center mt-12">
+  <a
+    href="/projects"
+    className="inline-block px-8 py-3 md:px-10 md:py-4 text-lg md:text-xl font-semibold rounded-full 
+              bg-gradient-to-r from-blue-500 to-green-600 hover:from-green-600 hover:to-blue-500
+              text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1
+              focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300 ease-in-out"
+    aria-label="Explore all projects"
+  >
+    Explore All Projects →
+  </a>
+</div>
       </div>
     </section>
   );

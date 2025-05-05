@@ -71,3 +71,22 @@ h6 {
 .whitespace-pre-line {
   white-space: pre-line;
 }
+.project-card {
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.media-container {
+  position: relative;
+  background: #f3f4f6;
+}
+
+.media-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 12px rgba(0,0,0,0.08);
+}
