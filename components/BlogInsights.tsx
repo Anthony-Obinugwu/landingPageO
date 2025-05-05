@@ -40,6 +40,17 @@ export default function BlogInsights() {
             <AnimatedArticle key={article.id} article={article} index={index} />
           ))}
         </div>
+        <div className="text-center mt-12">
+          <a
+            href="/blogs"
+            className="inline-block px-8 py-3 md:px-10 md:py-4 text-lg md:text-xl font-semibold rounded-full 
+                      bg-green-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1
+                      focus:outline-none focus:ring-4 focus:ring-green-300 transition-all duration-300 ease-in-out"
+            aria-label="Explore all blogs"
+          >
+            Explore All Blogs →
+          </a>
+        </div>
       </div>
     </section>
   );

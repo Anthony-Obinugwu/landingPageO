@@ -59,23 +59,23 @@ const TestimonialCarousel = () => {
   }, [isInView, controls]);
 
   return (
-    <section ref={containerRef} className="py-20 bg-white" id="reviews">
-      <div className="container mx-auto px-4 overflow-hidden">
+    <section ref={containerRef} className="py-20 bg-white flex items-center justify-center" id="reviews">
+      <div className="container mx-auto px-4 overflow-hidden text-center">
         <motion.h2
-          className="text-3xl font-bold text-c  a enter mb-12"
+          className="text-3xl font-bold text-gray-900 mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={controls}
           variants={{
-            visible: { opacity: 1, y: 0 }
+            visible: { opacity: 1, y: 0 },
           }}
           transition={{ duration: 1 }}
         >
-          <span className="text-Black-600">Client Testimonials</span>
+          <span className="text-black">Client Testimonials</span>
         </motion.h2>
 
         <div className="relative">
           <motion.div
-            className="flex gap-8"
+            className="flex gap-8 justify-center"
             animate={{
               x: [0, -1040],
             }}
@@ -95,18 +95,18 @@ const TestimonialCarousel = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={controls}
                 variants={{
-                  visible: { opacity: 1, y: 0 }
+                  visible: { opacity: 1, y: 0 },
                 }}
-                transition={{ 
+                transition={{
                   duration: 0.5,
-                  delay: (index % reviews.length) * 0.15
+                  delay: (index % reviews.length) * 0.15,
                 }}
               >
                 <div className="h-full p-6 bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-all hover:border-primary-500 group">
                   <p className="text-gray-600 mb-6 leading-relaxed group-hover:text-gray-800 transition-colors">
                     &ldquo;{review.text}&rdquo;
                   </p>
-                  <div className="mt-auto">
+                  <div className="mt-auto text-left">
                     <h3 className="font-bold text-lg text-blue-600">{review.author}</h3>
                     <div className="flex items-center mb-1">
                       {[...Array(5)].map((_, i) => (

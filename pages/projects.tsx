@@ -221,111 +221,124 @@ export default function ProjectsPage() {
   const handlePlayClick = (id: string) => {
     setPlayingVideoId(id);
   };
-    return (
-      <div className="min-h-screen flex flex-col pt-14">
-        <Header />
-  
-        <main className="flex-1 bg-light-gray">
-          <motion.section 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="container mx-auto px-4 md:px-6 lg:px-8 py-8 md:py-12 lg:py-16 xl:py-20"
-          >
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              className="text-center mb-8 md:mb-12 lg:mb-16"
+
+  return (
+    <>
+      {/* Custom Header */}
+      <header className="bg-white shadow-md">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <h1 className="text-2xl font-bold text-gray-900">Portfolio</h1>
+          <nav>
+            <a
+              href="/"
+              className="text-tech-green font-medium hover:underline transition-colors"
             >
-              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-3 md:mb-4">
-                Our Projects
-              </h1>
-              <p className="text-lg md:text-xl lg:text-2xl text-gray-600">
-                Where innovation meets execution
-              </p>
-            </motion.div>
-  
-            <div className="grid gap-8 md:gap-12 lg:gap-16">
-              {projects.map((project) => (
-                <motion.div
-                  key={project.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-30px" }}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-                >
-                  {/* Media Container */}
-                  <div className="aspect-video bg-gray-100 relative">
-                {project.isVideo ? (
-                  playingVideoId === project.id ? (
-                    <iframe
-                      src={`${gveVideo}?autoplay=1`}
-                      className="w-full h-full"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      title={project.title}
-                    />
-                  ) : (
-                    <div className="w-full h-full relative">
-                      <img
-                        src="/pictures/GVE-pic.jpeg" // Your video thumbnail
-                        alt={`${project.title} thumbnail`}
-                        className="w-full h-full object-cover"
+              ← Back to Home
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <main className="flex-1 bg-light-gray">
+        <motion.section
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="container mx-auto px-4 md:px-6 lg:px-8 py-8 md:py-12 lg:py-16 xl:py-20"
+        >
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            className="text-center mb-8 md:mb-12 lg:mb-16"
+          >
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-3 md:mb-4">
+              Our Projects
+            </h1>
+            <p className="text-lg md:text-xl lg:text-2xl text-gray-600">
+              Where innovation meets execution
+            </p>
+          </motion.div>
+
+          <div className="grid gap-8 md:gap-12 lg:gap-16">
+            {projects.map((project) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-30px" }}
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              >
+                {/* Media Container */}
+                <div className="aspect-video bg-gray-100 relative">
+                  {project.isVideo ? (
+                    playingVideoId === project.id ? (
+                      <iframe
+                        src={`${gveVideo}?autoplay=1`}
+                        className="w-full h-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        title={project.title}
                       />
-                      <button
-                        onClick={() => handlePlayClick(project.id)}
-                        className="absolute inset-0 flex items-center justify-center group"
-                        aria-label="Play video"
-                      >
-                        <div className="bg-white/90 rounded-full p-3 md:p-4 group-hover:scale-110 transition-transform duration-200">
-                          <Play className="h-6 w-6 text-gray-900" />
-                        </div>
-                      </button>
-                    </div>
-                  )
-                ) : (
-                  <ImageSlideshow 
-                    images={project.images} 
-                    interval={5000}
-                    className="w-full h-full"
-                  />
-                )}
-              </div>
-  
-                  {/* Content Container */}
-                  <div className="p-5 md:p-6 lg:p-8 xl:p-10 space-y-4 md:space-y-5 lg:space-y-6">
-                    <div className="space-y-2">
-                      <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900">
-                        {project.title}
-                      </h2>
-                      <p className="text-base md:text-lg lg:text-xl text-gray-600">
-                        {project.location}
-                      </p>
-                    </div>
-  
-                    <p className="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed">
-                      {project.description}
-                    </p>
-  
-                    <div className="grid gap-3 md:gap-4 lg:gap-5 md:grid-cols-2 lg:grid-cols-3">
-                      {project.features.map((feature, index) => (
-                        <AnimatedFeature
-                          key={index}
-                          icon={feature.icon}
-                          title={feature.title}
-                          description={feature.description}
-                          className="h-full text-sm md:text-base"
+                    ) : (
+                      <div className="w-full h-full relative">
+                        <img
+                          src="/pictures/GVE-pic.jpeg" // Your video thumbnail
+                          alt={`${project.title} thumbnail`}
+                          className="w-full h-full object-cover"
                         />
-                      ))}
-                    </div>
+                        <button
+                          onClick={() => handlePlayClick(project.id)}
+                          className="absolute inset-0 flex items-center justify-center group"
+                          aria-label="Play video"
+                        >
+                          <div className="bg-white/90 rounded-full p-3 md:p-4 group-hover:scale-110 transition-transform duration-200">
+                            <Play className="h-6 w-6 text-gray-900" />
+                          </div>
+                        </button>
+                      </div>
+                    )
+                  ) : (
+                    <ImageSlideshow
+                      images={project.images}
+                      interval={5000}
+                      className="w-full h-full"
+                    />
+                  )}
+                </div>
+
+                {/* Content Container */}
+                <div className="p-5 md:p-6 lg:p-8 xl:p-10 space-y-4 md:space-y-5 lg:space-y-6">
+                  <div className="space-y-2">
+                    <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900">
+                      {project.title}
+                    </h2>
+                    <p className="text-base md:text-lg lg:text-xl text-gray-600">
+                      {project.location}
+                    </p>
                   </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.section>
-        </main>
-        
-        <Analytics />
-        <Footer />
-      </div>
-    );
-  }
+
+                  <p className="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  <div className="grid gap-3 md:gap-4 lg:gap-5 md:grid-cols-2 lg:grid-cols-3">
+                    {project.features.map((feature, index) => (
+                      <AnimatedFeature
+                        key={index}
+                        icon={feature.icon}
+                        title={feature.title}
+                        description={feature.description}
+                        className="h-full text-sm md:text-base"
+                      />
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+      </main>
+      <Analytics />
+      <Footer />
+    </>
+  );
+}

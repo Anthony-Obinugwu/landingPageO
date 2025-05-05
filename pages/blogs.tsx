@@ -4,9 +4,7 @@ import "@/app/globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import Link from "next/link";
 import Image from "next/image";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
 
 interface Article {
   id: number;
@@ -75,19 +73,33 @@ const articles: Article[] = [
 export default function Blogs() {
   return (
     <>
-      <Header />
-      <main className="min-h-screen bg-gray-50 pt-9 md:pt-10">
+      {/* Custom Header */}
+      <header className="bg-white shadow-md">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <h1 className="text-2xl font-bold text-gray-900">Blog Gallery</h1>
+          <nav>
+            <a
+              href="/"
+              className="text-tech-green font-medium hover:underline transition-colors"
+            >
+              ← Back to Home
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <main className="min-h-screen bg-gray-50 pt-4 md:pt-6">
         <section className="py-16">
           <div className="container mx-auto px-4 max-w-6xl">
             <h2 className="text-3xl font-bold text-center mb-6">Blog & Insights</h2>
             <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
               Discover the latest trends, strategies, and insights about hybrid workspaces in Abuja.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {articles.map((article) => (
-                <Link 
-                  key={article.id} 
+                <Link
+                  key={article.id}
                   href={`/blog/${article.id}`}
                   className="group block"
                 >
@@ -101,7 +113,7 @@ export default function Blogs() {
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
-                    
+
                     {/* Article Content */}
                     <div className="p-6 flex-grow">
                       <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-tech-green transition-colors duration-300">

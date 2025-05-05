@@ -7,7 +7,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react";
 
-
 const services = [
   {
     title: "Elite Shared Office in Abuja",
@@ -68,31 +67,47 @@ export default function ServicesPage() {
 
   return (
     <>
-      <Header />
-      <main className="min-h-screen bg-light-gray pt-11 md:pt-20"> 
+      {/* Custom Header */}
+      <header className="bg-white shadow-md">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <h1 className="text-2xl font-bold text-gray-900">Our Services</h1>
+          <nav>
+            <a
+              href="/"
+              className="text-tech-green font-medium hover:underline transition-colors"
+            >
+              ← Back to Home
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <main className="min-h-screen bg-light-gray pt-4 md:pt-6">
         <section className="py-12 md:py-20 container mx-auto px-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-12 md:mb-16 scroll-mt-16" 
+            className="text-center mb-12 md:mb-16 scroll-mt-16"
           >
             <h1 className="text-3xl md:text-5xl font-bold text-dark-gray mb-3 md:mb-4">
-            Redefining Workspaces for the Modern Workforce
+              Redefining Workspaces for the Modern Workforce
             </h1>
             <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto px-2">
-            Crafting Intelligent, Flexible & Sustainable Work Environments That Power Productivity and Collaboration
+              Crafting Intelligent, Flexible & Sustainable Work Environments That Power Productivity and Collaboration
             </p>
           </motion.div>
 
           <div className="space-y-12 md:space-y-20">
             {services.map((service, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4 }}
                 viewport={{ margin: "-100px 0px 0px 0px" }}
-                className={`flex flex-col gap-4 md:gap-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                className={`flex flex-col gap-4 md:gap-12 ${
+                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                }`}
               >
                 {/* Image Container */}
                 <div className="md:w-1/2 h-64 md:h-80 relative rounded-xl overflow-hidden shadow-lg">
@@ -117,7 +132,9 @@ export default function ServicesPage() {
                   <button
                     onClick={() => handleWhatsAppClick(service.whatsappMessage)}
                     className={`mt-3 md:mt-4 bg-tech-green text-white px-6 py-2 md:px-8 md:py-3 rounded-full hover:bg-green-600 transition-colors text-sm md:text-base ${
-                      index % 2 === 0 ? 'self-start' : 'md:self-center w-full md:w-auto text-center'
+                      index % 2 === 0
+                        ? "self-start"
+                        : "md:self-center w-full md:w-auto text-center"
                     }`}
                   >
                     {service.cta}
