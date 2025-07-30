@@ -68,6 +68,24 @@ const articles: Article[] = [
     excerpt: "Delve into the innovations poised to dominate workspace design by 2030, from AR collaboration tools to ethical tech frameworks, as demonstrated by Outtabox.work’s visionary projects.",
     image: "/pictures/blogimage4.jpeg",
   },
+  {
+      id: 10,
+      title: "The Rise of Rural Coworking Spaces: Fostering Local Talent in Small Towns",
+      excerpt: "How rural coworking spaces are turning empty buildings into community centers and creating new economic opportunities in small towns across America.",
+      image: "/pictures/BlogPicture2.jpeg"
+  },
+  {
+    id: 11,
+    title: "Integrating AI in Coworking Spaces: Enhancing Collaboration and Efficiency",
+    excerpt: "How artificial intelligence is transforming coworking spaces through smart environments, better connections, and streamlined operations.",
+    image: "/pictures/BlogPicture1.jpeg"
+  },
+  {
+    id: 12,
+    title: "Coworking's New Role: Building Stronger Niche Professional Communities",
+    excerpt: "How specialized coworking spaces are creating tailored environments for industry-specific professionals to collaborate and innovate.",
+    image: "/pictures/BlogPicture.jpeg"
+  },
 ];
 
 export default function Blogs() {
