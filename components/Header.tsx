@@ -56,13 +56,13 @@ export default function Header() {
                 </button>
               ))}
 
-              {/* Websites Dropdown */}
+              {/* Sub-brands Dropdown */}
               <div className="relative">
                 <button
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   className="flex items-center text-sm font-medium text-gray-700 hover:text-tech-green transition-colors"
                 >
-                  Websites
+                  Sub-brands
                   <ChevronDown className="ml-1 w-4 h-4" />
                 </button>
                 {isDropdownOpen && (
