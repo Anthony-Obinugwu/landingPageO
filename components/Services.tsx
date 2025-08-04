@@ -9,7 +9,7 @@ const services = [
   {
     title: "Elite Shared Office in Abuja",
     description: "Office space planning & workspace optimization. Hybrid & remote-work solutions.",
-    image: "/pictures/Hybrid-Workspace.jpg",
+    image: "/pictures/Hybrid-Workspace.webp",
     cta: "Optimize Your Workspace",
     whatsappMessage: "I'm interested in an elite shared office in Abuja with high-speed Wi-Fi and 24/7 access.",
     alt: "Best coworking space in Abuja with 24/7 access, fast Wi-Fi, and comfortable workstations",
@@ -17,7 +17,7 @@ const services = [
   {
     title: "All-Inclusive Business Offices",
     description: "Custom office layouts, furniture & branding. Corporate headquarters, startups & innovation hubs.",
-    image: "/pictures/workspace-1.jpeg",
+    image: "/pictures/workspace-1.webp",
     cta: "Design Your Office",
     whatsappMessage: "I'd like to know more about all-inclusive business offices in Abuja with modern meeting rooms.",
     alt: "Fully serviced office space in Abuja with conference rooms and virtual office options",
@@ -25,7 +25,7 @@ const services = [
   {
     title: "Intelligent & Eco-Conscious Workspaces",
     description: "AI-powered lighting, smart desks & automation. Eco-friendly & wellness-focused workplace designs.",
-    image: "/pictures/workspace-2.jpeg",
+    image: "/pictures/workspace-2.webp",
     cta: "Go Smart & Sustainable",
     whatsappMessage: "I'm interested in intelligent and eco-conscious workspaces in Abuja with automated features.",
     alt: "Top-rated business hub in Abuja offering flexible office rentals and networking events",

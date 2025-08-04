@@ -3,7 +3,7 @@
 import "@/app/globals.css";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Header from "@/components/Header";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -11,7 +11,7 @@ const services = [
   {
     title: "Elite Shared Office in Abuja",
     description: "Transform your work experience with Abuja's most sophisticated shared office solutions, combining intelligent space design with cutting-edge workplace technology. Our elite offices offer meticulously planned layouts that balance collaborative open areas with private focus zones, all enhanced by ergonomic furniture and natural light optimization.",
-    image: "/pictures/serviceImage1.jpeg",
+    image: "/pictures/serviceImage1.webp",
     cta: "Optimize Your Workspace",
     whatsappMessage: "I'm interested in an elite shared office in Abuja with high-speed Wi-Fi and 24/7 access.",
     alt: "Best coworking space in Abuja with 24/7 access, fast Wi-Fi, and comfortable workstations",
@@ -19,7 +19,7 @@ const services = [
   {
     title: "All-Inclusive Business Offices",
     description: "From concept to completion, we craft fully customized office environments that embody your company's vision and culture. Our turnkey solutions combine intelligent space planning with branded interior design, delivering workspaces that inspire productivity and reflect your corporate identity. We specialize in creating functional yet innovative layouts tailored to your specific operational needs - whether configuring executive suites for corporate headquarters, designing collaborative hubs for growing startups, or building specialized environments for innovation teams. Every detail is considered, from ergonomic furniture selection and strategic workstation placement to integrated branding elements and wayfinding systems.",
-    image: "/pictures/serviceImage2.jpeg",
+    image: "/pictures/serviceImage2.webp",
     cta: "Design Your Office",
     whatsappMessage: "I'd like to know more about all-inclusive business offices in Abuja with modern meeting rooms.",
     alt: "Fully serviced office space in Abuja with conference rooms and virtual office options",
@@ -27,7 +27,7 @@ const services = [
   {
     title: "Intelligent & Eco-Conscious Workspaces",
     description: "We pioneer next-generation work environments where artificial intelligence and sustainable design converge to create self-regulating offices that optimize both human performance and planetary health. Our intelligent workspaces harness machine learning to dynamically adjust lighting, temperature, and spatial configurations in real-time, responding to occupancy patterns and individual work rhythms. The ecosystem integrates responsive work surfaces with built-in wellness monitoring, air purification systems, and noise-canceling acoustics—all powered by renewable energy microgrids. By blending biophilic design principles with IoT automation, we create environments that reduce operational carbon footprints while actively enhancing cognitive function, employee wellbeing, and collaborative potential.",
-    image: "/pictures/serviceImage3.jpeg",
+    image: "/pictures/serviceImage3.webp",
     cta: "Go Smart & Sustainable",
     whatsappMessage: "I'm interested in intelligent and eco-conscious workspaces in Abuja with automated features.",
     alt: "Top-rated business hub in Abuja offering flexible office rentals and networking events",
@@ -35,7 +35,7 @@ const services = [
   {
     title: "Private Suites & Corporate Lounges",
     description: "We craft exclusive private offices and executive workspaces that blend prestige with cutting-edge functionality, designed specifically for C-Suite leaders and discerning professionals. Our premium suites combine soundproofed private offices with luxurious meeting hubs and access to curated co-working areas, all featuring future-forward designs that anticipate the evolving needs of modern leadership. Each space is engineered with executive-grade acoustics, integrated smart conference technology, and bespoke interior detailing that projects corporate stature while enhancing decision-making efficiency.",
-    image: "/pictures/serviceImage4.jpeg",
+    image: "/pictures/serviceImage4.webp",
     cta: "Elevate Your Executive Space",
     whatsappMessage: "I want to learn about private office suites and corporate lounges in Abuja.",
     alt: "Professional shared workspace in Abuja with ergonomic seating and private meeting rooms",
@@ -43,7 +43,7 @@ const services = [
   {
     title: "Budget-Friendly & Trendy Offices",
     description: "Designed for forward-thinking teams and entrepreneurs, our budget-conscious workspaces prove sustainability and innovation needn’t come at a premium. These energy-optimized environments feature smart power management systems, upcycled designer furnishings, and modular layouts that adapt to your team’s evolving needs. The spaces harness natural ventilation strategies, LED lighting grids with motion sensors, and shared resource hubs to minimize operational costs while maximizing creative potential. Perfect for startups and agile teams, these offices deliver a vibrant, professional atmosphere with collaborative zones, soundproof focus pods, and tech-enabled meeting nooks—all powered by renewable energy solutions that keep overheads low.",
-    image: "/pictures/serviceImage5.jpeg",
+    image: "/pictures/serviceImage5.webp",
     cta: "Innnovate Your Workspace",
     whatsappMessage: "I'm looking for budget-friendly and trendy offices in Abuja for freelancers and startups.",
     alt: "Affordable and stylish office space in Abuja for freelancers, startups, and corporate teams",
@@ -51,7 +51,7 @@ const services = [
   {
     title: "Cutting-Edge Innovation Hubs",
     description: "We engineer dynamic workspaces that fuel technological breakthroughs, designed specifically for Nigeria’s most ambitious tech pioneers. These innovation hubs combine laboratory-grade infrastructure with collaborative maker spaces, featuring modular clean rooms, high-density computing zones, and rapid prototyping facilities—all powered by enterprise-grade fiber optics and backup systems. The environment stimulates cross-pollination between disciplines, with augmented reality whiteboards, AI-assisted design stations, and immersive demo rooms that transform conceptual ideas into market-ready solutions.",
-    image: "/pictures/serviceImage6.jpeg",
+    image: "/pictures/serviceImage6.webp",
     cta: "Give your workspace a tech upgrade",
     whatsappMessage: "Can you tell me more about cutting-edge innovation hubs in Abuja for entrepreneurs?",
     alt: "Innovative tech workspace in Abuja for creative professionals and entrepreneurs",
@@ -146,6 +146,7 @@ export default function ServicesPage() {
         </section>
       </main>
       <Analytics />
+      <SpeedInsights />
       <Footer />
     </>
   );

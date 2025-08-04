@@ -31,13 +31,13 @@ const companies = {
     },
     {
       name: "Home Mall International Co. LTD",
-      logo: "/pictures/Home Mall.jpeg",
+      logo: "/pictures/Home Mall.webp",
       tagline: "Experience Center + Showroom",
       url: "", // Add the corresponding URL
     },
     {
       name: "Eduvacity",
-      logo: "/pictures/Eduvacity.jpeg",
+      logo: "/pictures/Eduvacity.webp",
       tagline: "Education Hub",
       url: "https://www.instagram.com/eduvacity/p/DDdtyaBiRgt/", // Add the corresponding URL
     },
@@ -45,12 +45,12 @@ const companies = {
   contributed: [
     {
       name: "MTN",
-      logo: "/pictures/mtn.png",
+      logo: "/pictures/mtn.webp",
       url: "https://www.mtn.ng/", // Add the corresponding URL
     },
     {
       name: "PiggyVest",
-      logo: "/pictures/piggyvest.jpeg",
+      logo: "/pictures/piggyvest.webp",
       url: "https://www.piggyvest.com/", // Add the corresponding URL
     },
     {
@@ -75,7 +75,7 @@ const companies = {
     },
     {
       name: "FAAN",
-      logo: "/pictures/FAAN.jpeg",
+      logo: "/pictures/FAAN.webp",
       url: "https://faan.gov.ng", // Add the corresponding URL
     },
   ],

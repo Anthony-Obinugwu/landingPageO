@@ -28,7 +28,7 @@ const articles: Article[] = [
     id: 1,
     title: "Why Abuja’s Top Companies Are Switching to Hybrid Workspaces (#FutureOfWork #AbujaBusiness)",
     excerpt: "The workplace is evolving, and Abuja’s leading enterprises are embracing hybrid workspaces for flexibility, productivity, and cost efficiency. Discover why hybrid models are dominating Nigeria’s capital and how you can leverage the #1 best workspace in Abuja to stay ahead.",
-    image: "/pictures/Modern Workspace-2.jpeg",
+    image: "/pictures/Modern Workspace-2.webp",
     content: [
     {
       "type": "heading",
@@ -60,7 +60,7 @@ const articles: Article[] = [
     id: 2,
     title: "How to Maximize Productivity in a Hybrid Workspace (#WorkSmart #AbujaOffices)",
     excerpt: "Hybrid work is here to stay, but are you optimizing it? Learn proven strategies to boost efficiency in a hybrid setup and why Abuja’s premier workspace is the ideal choice for professionals who demand excellence.",
-    image: "/pictures/Modern Workspace.jpeg",
+    image: "/pictures/Modern Workspace.webp",
       "content": [
         {
           "type": "heading",
@@ -92,7 +92,7 @@ const articles: Article[] = [
     id: 3,
     title: "The Ultimate Guide to Networking in a Hybrid Workspace (#AbujaNetworking #CoworkingSpace)",
     excerpt: "Networking in a hybrid world requires strategy. Discover how Abuja’s #1 hybrid workspace fosters connections through curated events, community hubs, and digital tools that bridge the gap between remote and in-person collaboration.",
-    image: "/pictures/koridor.jpeg",
+    image: "/pictures/koridor.webp",
       "content": [
         {
           "type": "heading",
@@ -124,7 +124,7 @@ const articles: Article[] = [
     id: 4,
     title: "How Abuja's Smartest Startups Use Hybrid Workspaces to Scale Faster (#StartupAbuja #ScaleSmart)",
     excerpt: "Abuja's startup scene is rewriting the rulebook - and hybrid workspaces are their secret weapon. Discover how 83% of the capital's fastest-growing startups are leveraging flexible workspaces to secure funding 40% faster, attract top talent, and scale on demand. Learn the 3 proven tactics that helped Outtabox grow from 5 to 50+ employees without costly leases - all while maintaining that crucial Abuja business presence.",
-    image: "/pictures/dark office.jpeg",
+    image: "/pictures/dark office.webp",
       "content": [
         {
           "type": "heading",
@@ -156,7 +156,7 @@ const articles: Article[] = [
     id: 5,
     title: "The Psychology Behind Abuja's Most Effective Hybrid Teams (#TeamSuccess #AbujaOffices)",
     excerpt: "Why do Abuja's hybrid teams report 91% job satisfaction versus just 67% in traditional offices? The answer lies in neuroscience-meets-local-culture. Explore how smart workspace design - from 'focus cocoons' to culturally-curated collaboration zones - is helping teams achieve 22% faster project completion. Plus: 4 brain-friendly practices you can implement tomorrow to transform your team's performance.",
-    image: "/pictures/finance office.jpeg",
+    image: "/pictures/finance office.webp",
       "content": [
         {
           "type": "heading",
@@ -192,7 +192,7 @@ const articles: Article[] = [
     id: 6,
     title: "Hybrid Workspaces in 2025: How Flexible Design Drives Productivity and Talent Retention",
     excerpt: "Discover how hybrid workspaces are redefining corporate success by balancing remote flexibility with in-office collaboration, backed by data-driven strategies and real-world case studies from Africa’s leading workspace innovator.",
-    image: "/pictures/blogimage.jpeg",
+    image: "/pictures/blogimage.webp",
       "content": [
         {
           "type": "heading",
@@ -232,7 +232,7 @@ const articles: Article[] = [
     id: 7,
     title: "Smart, Sustainable Workspaces: Merging Eco-Innovation with Cutting-Edge Design",
     excerpt: "Explore how AI, biophilic elements, and circular design principles are transforming offices into eco-friendly productivity hubs, featuring actionable insights from Outtabox.work’s award-winning projects.",
-    image: "/pictures/blogimage1.jpeg",
+    image: "/pictures/blogimage1.webp",
       "content": [
         {
           "type": "heading",
@@ -272,7 +272,7 @@ const articles: Article[] = [
     id: 8,
     title: "Employee Wellness in Hybrid Work Models: Designing Offices That Prioritize Mental and Physical Health",
     excerpt: "Learn how ergonomic layouts, wellness-centric zones, and smart acoustics are becoming non-negotiables for modern offices, with insights from Outtabox.work’s transformative projects.",
-    image: "/pictures/blogimage2.jpeg",
+    image: "/pictures/blogimage2.webp",
       "content": [
         {
           "type": "heading",
@@ -312,7 +312,7 @@ const articles: Article[] = [
     id: 9,
     title: "The Future of Workspaces: AI, Nomadic Hubs, and Self-Healing Buildings",
     excerpt: "Delve into the innovations poised to dominate workspace design by 2030, from AR collaboration tools to ethical tech frameworks, as demonstrated by Outtabox.work’s visionary projects.",
-    image: "/pictures/blogimage4.jpeg",
+    image: "/pictures/blogimage4.webp",
       "content": [
         {
           "type": "heading",
@@ -352,7 +352,7 @@ const articles: Article[] = [
     id: 10,
     title: "The Rise of Rural Coworking Spaces: Fostering Local Talent in Small Towns",
     excerpt: "How rural coworking spaces are turning empty buildings into community centers and creating new economic opportunities in small towns across America.",
-    image: "/pictures/BlogPicture2.jpeg",
+    image: "/pictures/BlogPicture2.webp",
       "content": [
       {
         "type": "paragraph",
@@ -480,7 +480,7 @@ const articles: Article[] = [
     id: 11,
     title: "Integrating AI in Coworking Spaces: Enhancing Collaboration and Efficiency",
     excerpt: "How artificial intelligence is transforming coworking spaces through smart environments, better connections, and streamlined operations.",
-    image: "/pictures/BlogPicture1.jpeg",
+    image: "/pictures/BlogPicture1.webp",
     content: [
       {
         type: "paragraph",
@@ -580,7 +580,7 @@ const articles: Article[] = [
     id: 12,
     title: "Coworking's New Role: Building Stronger Niche Professional Communities",
     excerpt: "How specialized coworking spaces are creating tailored environments for industry-specific professionals to collaborate and innovate.",
-    image: "/pictures/BlogPicture.jpeg",
+    image: "/pictures/BlogPicture.webp",
     content: [
       {
         type: "paragraph",

@@ -11,32 +11,32 @@ const works = [
   },
   {
     type: "image",
-    src: "/pictures/workspace-1.jpeg",
+    src: "/pictures/workspace-1.webp",
     description: "Creative workspace design",
   },
   {
     type: "image",
-    src: "/pictures/workspace-2.jpeg",
+    src: "/pictures/workspace-2.webp",
     description: "Relaxation area for employees",
   },
   {
     type: "image",
-    src: "/pictures/workspace-3.jpeg",
+    src: "/pictures/workspace-3.webp",
     description: "Modern meeting area setup",
   },
   {
     type: "image",
-    src: "/pictures/workspace-4.jpeg",
+    src: "/pictures/workspace-4.webp",
     description: "Strategic Office Divisons",
   },
   {
     type: "image",
-    src: "/pictures/workspace-5.jpg",
+    src: "/pictures/workspace-5.webp",
     description: "Modern Personal Offices",
   },
   {
     type: "image",
-    src: "/pictures/Spaceful Lounge.jpeg",
+    src: "/pictures/Spaceful Lounge.webp",
     description: "Multi-Purposeful Hall",
   },
 ]

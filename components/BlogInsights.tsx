@@ -10,7 +10,7 @@ const articles = [
     excerpt: "The workplace is evolving, and Abuja’s leading enterprises are embracing hybrid workspaces for flexibility, productivity, and cost efficiency. Discover why hybrid models are dominating Nigeria’s capital and how you can leverage the #1 best workspace in Abuja to stay ahead.",
     content:
       "",
-    image: "/pictures/Level.jpg",
+    image: "/pictures/Level.webp",
   },
   {
     id: "2",
@@ -18,7 +18,7 @@ const articles = [
     excerpt: "Hybrid work is here to stay, but are you optimizing it? Learn proven strategies to boost efficiency in a hybrid setup and why Abuja’s premier workspace is the ideal choice for professionals who demand excellence.",
     content:
       "",
-    image: "/pictures/Level2.jpg",
+    image: "/pictures/Level2.webp",
   },
   {
     id: "3",
@@ -26,7 +26,7 @@ const articles = [
     excerpt: "Networking in a hybrid world requires strategy. Discover how Abuja’s #1 hybrid workspace fosters connections through curated events, community hubs, and digital tools that bridge the gap between remote and in-person collaboration.",
     content:
       "",
-    image: "/pictures/Level3.jpg",
+    image: "/pictures/Level3.webp",
   },
 ];
 

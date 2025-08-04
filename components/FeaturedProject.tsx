@@ -8,54 +8,54 @@ import type { LucideIcon } from "lucide-react";
 
 const homeMallImages = [
   {
-    src: "/pictures/Home Mall.png", 
+    src: "/pictures/Home Mall (1).webp", 
     alt: "Home Mall showroom zone",
   },
   {
-    src: "/pictures/Home Mall1.png", 
+    src: "/pictures/Home Mall1.webp", 
     alt: "Home Mall workspace",
   },
   {
-    src: "/pictures/Home Mall2.png", 
+    src: "/pictures/Home Mall2.webp", 
     alt: "Home Mall collaboration area",
   },
   {
-    src: "/pictures/Home Mall3.png",
+    src: "/pictures/Home Mall3.webp",
     alt: "Home Mall collaboration area",
   },
   {
-    src: "/pictures/Home Mall4.png",
+    src: "/pictures/Home Mall4.webp",
     alt: "Home Mall collaboration area",
   },
   {
-    src: "/pictures/Home Mall5.png",
+    src: "/pictures/Home Mall5.webp",
     alt: "Home Mall collaboration area",
   },
   {
-    src: "/pictures/Home Mall6.png",
+    src: "/pictures/Home Mall6.webp",
     alt: "Home Mall collaboration area",
   },
   {
-    src: "/pictures/Home Mall7.png",
+    src: "/pictures/Home Mall7.webp",
     alt: "Home Mall collaboration area",
   },
 ];
 
 const eduvacityImages = [
   {
-    src: "/pictures/Eduvacity1.jpeg",
+    src: "/pictures/Eduvacity1.webp",
     alt: "Eduvacity Small Office Space",
   },
   {
-    src: "/pictures/Eduvacity2.jpeg",
+    src: "/pictures/Eduvacity2.webp",
     alt: "Eduvacity Small Office Space",
   },
   {
-    src: "/pictures/Eduvacity3.jpeg",
+    src: "/pictures/Eduvacity3.webp",
     alt: "Eduvacity Training Center",
   },
   {
-    src: "/pictures/Eduvacity4.jpeg",
+    src: "/pictures/Eduvacity4.webp",
     alt: "Eduvacity Front Desk",
   },
 ];

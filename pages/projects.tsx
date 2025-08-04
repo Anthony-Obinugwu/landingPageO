@@ -1,6 +1,7 @@
 "use client";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import "@/app/globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { motion } from "framer-motion";
 import { LucideIcon } from "lucide-react";
 import { Sun, Users, Leaf, Zap, Cpu, Lightbulb, Play } from "lucide-react";
@@ -14,42 +15,42 @@ const gveVideo = "https://www.youtube.com/embed/-vL4HXeWeyg";
 
 const areaiImages = [
   {
-    src: "/pictures/Aeai-1.jpg",
+    src: "/pictures/Aeai-1.webp",
     alt: "Areai coworking space",
   },
   {
-    src: "/pictures/Areai-2.jpeg",
+    src: "/pictures/Areai-2.webp",
     alt: "Areai office space",
   },
   {
-    src: "/pictures/Areai-3.jpeg",
+    src: "/pictures/Areai-3.webp",
     alt: "Areai meeting rooms",
   },
   {
-    src: "/pictures/Areai-4.jpeg",
+    src: "/pictures/Areai-4.webp",
     alt: "Areai workspace",
   },
   {
-    src: "/pictures/Areai-5.jpeg",
+    src: "/pictures/Areai-5.webp",
     alt: "Areai facilities",
   },
   {
-    src: "/pictures/Areai-6.jpeg",
+    src: "/pictures/Areai-6.webp",
     alt: "Areai business center",
   },
 ];
 
 const dnovateImages = [
   {
-    src: "/pictures/DiNovate3.jpeg",
+    src: "/pictures/DiNovate3.webp",
     alt: "DNovate lounge area",
   },
   {
-    src: "/pictures/DiNovate2.jpeg",
+    src: "/pictures/DiNovate2.webp",
     alt: "DNovate workspace",
   },
   {
-    src: "/pictures/DiNovate1.jpeg",
+    src: "/pictures/DiNovate1.webp",
     alt: "DNovate meeting area",
   },
 ];
@@ -91,19 +92,19 @@ const homeMallImages = [
 
 const eduvacityImages = [
   {
-    src: "/pictures/Eduvacity1.jpeg", // Replace with the actual image path
+    src: "/pictures/Eduvacity1.webp", // Replace with the actual image path
     alt: "Eduvacity Small Office Space",
   },
   {
-    src: "/pictures/Eduvacity2.jpeg", // Replace with the actual image path
+    src: "/pictures/Eduvacity2.webp", // Replace with the actual image path
     alt: "Eduvacity Small Office Space",
   },
   {
-    src: "/pictures/Eduvacity3.jpeg", // Replace with the actual image path
+    src: "/pictures/Eduvacity3.webp", // Replace with the actual image path
     alt: "Eduvacity Training Center",
   },
   {
-    src: "/pictures/Eduvacity4.jpeg", // Replace with the actual image path
+    src: "/pictures/Eduvacity4.webp", // Replace with the actual image path
     alt: "Eduvacity Front Desk",
   },
 ];
@@ -281,7 +282,7 @@ export default function ProjectsPage() {
                     ) : (
                       <div className="w-full h-full relative">
                         <img
-                          src="/pictures/GVE-pic.jpeg" // Your video thumbnail
+                          src="/pictures/GVE-pic.webp" // Your video thumbnail
                           alt={`${project.title} thumbnail`}
                           className="w-full h-full object-cover"
                         />
@@ -338,6 +339,7 @@ export default function ProjectsPage() {
         </motion.section>
       </main>
       <Analytics />
+      <SpeedInsights />
       <Footer />
     </>
   );
