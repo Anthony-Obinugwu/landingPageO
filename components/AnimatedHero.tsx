@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function AnimatedHero() {
   // Image optimization specs
   const heroImage = {
-    src: "/pictures/hero-image.webp", 
+    src: "/pictures/workspace-1.webp", 
     alt: "Modern workspace design by Outtabox",
     width: 2880, // Original width
     height: 1620, // Original height (16:9 ratio)
