@@ -42,7 +42,7 @@ export default function RootLayout({
         spinner.remove(); // Remove the spinner from the DOM
         console.log("Spinner removed after 6 seconds.");
       }
-    }, 6000); // 6000ms = 6 seconds
+    }, 1000); // 6000ms = 6 seconds
 
     // Cleanup the timeout on component unmount
     return () => {
