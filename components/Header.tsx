@@ -126,7 +126,7 @@ export default function Header() {
 
           {/* Websites Dropdown for Mobile */}
           <div className="space-y-2">
-            <span className="block text-sm font-medium text-gray-700">Websites</span>
+            <span className="block text-sm font-medium text-gray-700">Sub-brands</span>
             {websites.map((site) => (
               <a
                 key={site.name}
